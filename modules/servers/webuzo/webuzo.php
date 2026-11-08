@@ -1689,6 +1689,35 @@ function webuzo_enduser_panel($vars){
 
 	$port = !empty($webuzo_conf['use_sso_on_80']) ? 80 : $GLOBALS['webuzo_conf']['panel_ports']['enduser_ssl'];
 	
+	if(empty($ret['done']['sess_token']) || empty($ret['done']['sess_key'])){
+		$err = 'Webuzo SSO Failed';
+		if(!empty($ret['error'])){
+			$err .= ': ' . (is_array($ret['error']) ? implode(', ', $ret['error']) : $ret['error']);
+		} elseif(!empty($GLOBALS['webuzo_curl_err'])){
+			$err .= ' (cURL Error: ' . $GLOBALS['webuzo_curl_err'] . ')';
+		} else {
+			$err .= ': Invalid response from Webuzo server or account username not found.';
+		}
+		
+		$direct_url = 'https://' . $tmp_hostname . ':' . $port . '/';
+		
+		echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Webuzo Login</title></head><body style="background:#f4f6f9;margin:0;padding:20px;">';
+		echo '<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 25px; border: 1px solid #f5c6cb; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">';
+		echo '<h3 style="color: #721c24; margin-top: 0;">Σφάλμα Αυτόματης Σύνδεσης Webuzo (SSO)</h3>';
+		echo '<p style="color: #495057; font-size: 14px;"><strong>Μήνυμα Webuzo:</strong> <span style="color:#d9534f;">' . htmlspecialchars($err) . '</span></p>';
+		echo '<div style="background: #f8f9fa; padding: 12px; border: 1px solid #e9ecef; border-radius: 4px; margin: 15px 0; font-size: 13px; color: #555;">';
+		echo '<strong>Server:</strong> ' . htmlspecialchars($tmp_hostname) . '<br>';
+		echo '<strong>Username Λογαριασμού:</strong> ' . htmlspecialchars($vars['username']) . '<br>';
+		echo '<strong>Port:</strong> ' . htmlspecialchars($port);
+		echo '</div>';
+		echo '<p style="margin-top: 25px;">';
+		echo '<a href="' . htmlspecialchars($direct_url) . '" target="_blank" style="display: inline-block; background: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold;">Απευθείας Σύνδεση στο Webuzo Panel &raquo;</a>';
+		echo '&nbsp;&nbsp;<a href="javascript:history.back()" style="color: #6c757d; text-decoration: none; padding: 10px 15px;">&laquo; Επιστροφή</a>';
+		echo '</p>';
+		echo '</div></body></html>';
+		exit;
+	}
+
 	$redirect_url = 'https://'.$tmp_hostname.':'.$port.'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'].'&goto_cp='.rawurlencode(webuzo_get_current_url());
 	
 	echo '<meta http-equiv="Refresh" content="0;url='.$redirect_url.'">';
