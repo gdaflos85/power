@@ -1157,35 +1157,49 @@ function webuzo_enduser_call($params, $loginAs, $path, $post = array()){
 }
 
 function webuzo_populate_server_params(&$params){
-	if(empty($params['serverpassword']) && empty($params['serveraccesshash'])){
-		$ser_id = !empty($params['serverid']) ? $params['serverid'] : 0;
-		if(empty($ser_id) && !empty($params['serviceid'])){
-			try {
-				$service = Capsule::table('tblhosting')->where('id', $params['serviceid'])->first();
-				if(!empty($service->server)){
-					$ser_id = $service->server;
-					$params['serverid'] = $ser_id;
-				}
-			} catch (\Exception $e) {}
-		}
-		
+	// 1. Populate hosting service details if missing
+	if(empty($params['username']) && !empty($params['serviceid'])){
 		try {
-			if(!empty($ser_id)){
-				$ser_data = Capsule::table('tblservers')->where('id', $ser_id)->first();
-			} else {
-				$ser_data = Capsule::table('tblservers')->where('type', 'webuzo')->first();
-			}
-			
-			if(!empty($ser_data)){
-				if(empty($params['serverhostname'])) $params['serverhostname'] = $ser_data->hostname;
-				if(empty($params['serverip'])) $params['serverip'] = $ser_data->ipaddress;
-				if(empty($params['serverusername'])) $params['serverusername'] = $ser_data->username;
-				$params['serverpassword'] = decrypt($ser_data->password);
-				$params['serveraccesshash'] = $ser_data->accesshash;
-				if(!isset($params['serversecure'])) $params['serversecure'] = $ser_data->secure;
+			$service = Capsule::table('tblhosting')->where('id', $params['serviceid'])->first();
+			if(!empty($service)){
+				if(!empty($service->username)) $params['username'] = $service->username;
+				if(!empty($service->server) && empty($params['serverid'])) $params['serverid'] = $service->server;
+				if(!empty($service->domain) && empty($params['domain'])) $params['domain'] = $service->domain;
 			}
 		} catch (\Exception $e) {}
 	}
+	
+	// 2. If serviceid wasn't in $params, try from $_REQUEST['id']
+	if(empty($params['username']) && !empty($_REQUEST['id'])){
+		try {
+			$service = Capsule::table('tblhosting')->where('id', (int)$_REQUEST['id'])->first();
+			if(!empty($service)){
+				if(!empty($service->username)) $params['username'] = $service->username;
+				if(!empty($service->server) && empty($params['serverid'])) $params['serverid'] = $service->server;
+				if(!empty($service->domain) && empty($params['domain'])) $params['domain'] = $service->domain;
+				$params['serviceid'] = (int)$_REQUEST['id'];
+			}
+		} catch (\Exception $e) {}
+	}
+	
+	// 3. Always populate server credentials from tblservers
+	$ser_id = !empty($params['serverid']) ? $params['serverid'] : 0;
+	try {
+		if(!empty($ser_id)){
+			$ser_data = Capsule::table('tblservers')->where('id', $ser_id)->first();
+		} else {
+			$ser_data = Capsule::table('tblservers')->where('type', 'webuzo')->first();
+		}
+		
+		if(!empty($ser_data)){
+			$params['serverhostname'] = !empty($ser_data->hostname) ? $ser_data->hostname : $ser_data->ipaddress;
+			$params['serverip'] = $ser_data->ipaddress;
+			$params['serverusername'] = $ser_data->username;
+			$params['serverpassword'] = decrypt($ser_data->password);
+			$params['serveraccesshash'] = $ser_data->accesshash;
+			$params['serversecure'] = $ser_data->secure;
+		}
+	} catch (\Exception $e) {}
 	
 	if(empty($params['serverhostname']) && !empty($params['serverip'])){
 		$params['serverhostname'] = $params['serverip'];
@@ -1708,19 +1722,36 @@ function webuzo_generate_sso_url($params){
 	webuzo_populate_server_params($params);
 	
 	$tmp_hostname = !empty($params['serverhostname']) ? $params['serverhostname'] : (!empty($params['serverip']) ? $params['serverip'] : '');
-	$enduser_port = !empty($webuzo_conf['use_sso_on_80']) ? 80 : $GLOBALS['webuzo_conf']['panel_ports']['enduser_ssl'];
 	$admin_port = !empty($GLOBALS['webuzo_conf']['panel_ports']['admin_ssl']) ? $GLOBALS['webuzo_conf']['panel_ports']['admin_ssl'] : '2005';
+	$enduser_port = !empty($webuzo_conf['use_sso_on_80']) ? 80 : $GLOBALS['webuzo_conf']['panel_ports']['enduser_ssl'];
 	
-	// 1. Try Enduser SSO first (port 2003)
-	$ret = webuzo_enduser_call($params, $params['username'], '?act=sso&noip=1');
-	if(!empty($ret['done']['sess_token']) && !empty($ret['done']['sess_key'])){
-		return 'https://'.$tmp_hostname.':'.$enduser_port.'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'];
+	$username = !empty($params['username']) ? $params['username'] : '';
+	
+	// 1. PRIMARY: Admin API SSO on port 2005 (confirmed working from WHMCS Admin)
+	if(!empty($username)){
+		$ret = webuzo_admin_call($params, '?act=sso&noip=1&user='.$username);
+		
+		$log_entry = sprintf(
+			"[Webuzo SSO AdminCall] User: %s | Server: %s:%s | Token: %s",
+			$username,
+			$tmp_hostname,
+			$admin_port,
+			(!empty($ret['done']['sess_token']) ? 'OK' : json_encode($ret))
+		);
+		logActivity($log_entry);
+		@file_put_contents('/home/marconis/whmcsdata19/webuzo_sso_debug.log', date('Y-m-d H:i:s') . ' ' . $log_entry . "\n", FILE_APPEND);
+		
+		if(!empty($ret['done']['sess_token']) && !empty($ret['done']['sess_key'])){
+			return 'https://'.$tmp_hostname.':'.$admin_port.'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'];
+		}
 	}
 	
-	// 2. If Enduser SSO failed, try Admin SSO with user param (port 2005)
-	$ret_admin = webuzo_admin_call($params, '?act=sso&noip=1&user='.$params['username']);
-	if(!empty($ret_admin['done']['sess_token']) && !empty($ret_admin['done']['sess_key'])){
-		return 'https://'.$tmp_hostname.':'.$admin_port.'/'.$ret_admin['done']['sess_token'].'/?as='.$ret_admin['done']['sess_key'];
+	// 2. SECONDARY: Enduser SSO call on port 2003
+	if(!empty($username)){
+		$ret_enduser = webuzo_enduser_call($params, $username, '?act=sso&noip=1');
+		if(!empty($ret_enduser['done']['sess_token']) && !empty($ret_enduser['done']['sess_key'])){
+			return 'https://'.$tmp_hostname.':'.$enduser_port.'/'.$ret_enduser['done']['sess_token'].'/?as='.$ret_enduser['done']['sess_key'];
+		}
 	}
 	
 	// 3. Fallback directly to Webuzo enduser panel
@@ -1734,6 +1765,7 @@ function webuzo_enduser_panel($vars){
 		header("Location: " . $redirect_url);
 	}
 	echo '<meta http-equiv="Refresh" content="0;url='.$redirect_url.'">';
+	echo '<script type="text/javascript">window.location.href = '.json_encode($redirect_url).';</script>';
 	exit;
 }
 
