@@ -1,0 +1,21 @@
+# Sensitive configuration files (CRITICAL)
+configuration.php
+.env
+
+# WHMCS Upload & Cache directories
+/attachments/
+/downloads/
+/templates_c/
+/storage/
+
+# Logs and temporary files
+*.log
+error_log
+/crons/logs/
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
