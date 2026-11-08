@@ -1124,12 +1124,19 @@ function webuzo_admin_panel($params = array(), $no_redirect = 0){
 		$tmp_hostname = $params['serverip'];
 	}
 	
-	$redirect_url = 'https://'.$tmp_hostname.':'.$GLOBALS['webuzo_conf']['panel_ports']['admin_ssl'].'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'];
+	if(!empty($ret['done']['sess_token']) && !empty($ret['done']['sess_key'])){
+		$redirect_url = 'https://'.$tmp_hostname.':'.$GLOBALS['webuzo_conf']['panel_ports']['admin_ssl'].'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'];
+	} else {
+		$redirect_url = 'https://'.$tmp_hostname.':'.$GLOBALS['webuzo_conf']['panel_ports']['admin_ssl'].'/';
+	}
 	
 	if(!empty($no_redirect)){
 		return $redirect_url;
 	}
 	
+	if(!headers_sent()){
+		header("Location: " . $redirect_url);
+	}
 	echo '<meta http-equiv="Refresh" content="0;url='.$redirect_url.'">';
 	exit;
 	
@@ -1137,14 +1144,55 @@ function webuzo_admin_panel($params = array(), $no_redirect = 0){
 
 // Admin API Call
 function webuzo_admin_call($params, $path, $post = array(), $cookies = array()){
+	webuzo_populate_server_params($params);
 	$ip = get_webuzo_serverip($params);
 	return Webuzo_Curl::make_api_call($ip, $params["serverusername"], get_webuzo_api_key($params), $path, $post, $cookies);
 }
 
 // Enduser API Call
 function webuzo_enduser_call($params, $loginAs, $path, $post = array()){
+	webuzo_populate_server_params($params);
 	$ip = get_webuzo_serverip($params);
 	return Webuzo_Curl::e_make_api_call($ip, $params["serverusername"], get_webuzo_api_key($params), $loginAs, $path, $post);
+}
+
+function webuzo_populate_server_params(&$params){
+	if(empty($params['serverpassword']) && empty($params['serveraccesshash'])){
+		$ser_id = !empty($params['serverid']) ? $params['serverid'] : 0;
+		if(empty($ser_id) && !empty($params['serviceid'])){
+			try {
+				$service = Capsule::table('tblhosting')->where('id', $params['serviceid'])->first();
+				if(!empty($service->server)){
+					$ser_id = $service->server;
+					$params['serverid'] = $ser_id;
+				}
+			} catch (\Exception $e) {}
+		}
+		
+		try {
+			if(!empty($ser_id)){
+				$ser_data = Capsule::table('tblservers')->where('id', $ser_id)->first();
+			} else {
+				$ser_data = Capsule::table('tblservers')->where('type', 'webuzo')->first();
+			}
+			
+			if(!empty($ser_data)){
+				if(empty($params['serverhostname'])) $params['serverhostname'] = $ser_data->hostname;
+				if(empty($params['serverip'])) $params['serverip'] = $ser_data->ipaddress;
+				if(empty($params['serverusername'])) $params['serverusername'] = $ser_data->username;
+				$params['serverpassword'] = decrypt($ser_data->password);
+				$params['serveraccesshash'] = $ser_data->accesshash;
+				if(!isset($params['serversecure'])) $params['serversecure'] = $ser_data->secure;
+			}
+		} catch (\Exception $e) {}
+	}
+	
+	if(empty($params['serverhostname']) && !empty($params['serverip'])){
+		$params['serverhostname'] = $params['serverip'];
+	}
+	if(empty($params['serverip']) && !empty($params['serverhostname'])){
+		$params['serverip'] = $params['serverhostname'];
+	}
 }
 
 function get_webuzo_api_key($params){
@@ -1654,72 +1702,37 @@ function webuzo_ClientArea($params) {
 
 }
 
+function webuzo_generate_sso_url($params){
+	global $webuzo_conf;
+	
+	webuzo_populate_server_params($params);
+	
+	$tmp_hostname = !empty($params['serverhostname']) ? $params['serverhostname'] : (!empty($params['serverip']) ? $params['serverip'] : '');
+	$enduser_port = !empty($webuzo_conf['use_sso_on_80']) ? 80 : $GLOBALS['webuzo_conf']['panel_ports']['enduser_ssl'];
+	$admin_port = !empty($GLOBALS['webuzo_conf']['panel_ports']['admin_ssl']) ? $GLOBALS['webuzo_conf']['panel_ports']['admin_ssl'] : '2005';
+	
+	// 1. Try Enduser SSO first (port 2003)
+	$ret = webuzo_enduser_call($params, $params['username'], '?act=sso&noip=1');
+	if(!empty($ret['done']['sess_token']) && !empty($ret['done']['sess_key'])){
+		return 'https://'.$tmp_hostname.':'.$enduser_port.'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'];
+	}
+	
+	// 2. If Enduser SSO failed, try Admin SSO with user param (port 2005)
+	$ret_admin = webuzo_admin_call($params, '?act=sso&noip=1&user='.$params['username']);
+	if(!empty($ret_admin['done']['sess_token']) && !empty($ret_admin['done']['sess_key'])){
+		return 'https://'.$tmp_hostname.':'.$admin_port.'/'.$ret_admin['done']['sess_token'].'/?as='.$ret_admin['done']['sess_key'];
+	}
+	
+	// 3. Fallback directly to Webuzo enduser panel
+	return 'https://'.$tmp_hostname.':'.$enduser_port.'/';
+}
+
 // Login to enduser panel from WHMCS client and admin panel
 function webuzo_enduser_panel($vars){
-	
-	global $webuzo_conf;
-	//echo '<pre>';
-	//print_r($vars);die();
-	
-	// For SSO we need hostname 1st because with IP there will be SSL cert error
-	$tmp_hostname = $vars['serverhostname'];
-	if(empty($tmp_hostname)){
-		$tmp_hostname = $vars['serverip'];
+	$redirect_url = webuzo_generate_sso_url($vars);
+	if(!headers_sent()){
+		header("Location: " . $redirect_url);
 	}
-	
-	// If $tmp_hostname is still empty that means $var does not have server data filled.
-	// So now we have to find the server details byfrom DB.
-	if(empty($tmp_hostname)){
-		
-		$query = Capsule::table('tblservers')
-			->where('type', 'webuzo')
-			->where('id', $vars['serverid'])
-			->get();
-		$ser_data = (array) $query[0];
-
-		// For SSO we need hostname 1st because with IP there will be SSL cert error
-		$tmp_hostname = $ser_data['hostname'];
-		if(empty($tmp_hostname)){
-			$tmp_hostname = $ser_data['ipaddress'];
-		}
-		
-	}
-	
-	$ret = webuzo_enduser_call($vars, $vars['username'], '?act=sso&noip=1');
-
-	$port = !empty($webuzo_conf['use_sso_on_80']) ? 80 : $GLOBALS['webuzo_conf']['panel_ports']['enduser_ssl'];
-	
-	if(empty($ret['done']['sess_token']) || empty($ret['done']['sess_key'])){
-		$err = 'Webuzo SSO Failed';
-		if(!empty($ret['error'])){
-			$err .= ': ' . (is_array($ret['error']) ? implode(', ', $ret['error']) : $ret['error']);
-		} elseif(!empty($GLOBALS['webuzo_curl_err'])){
-			$err .= ' (cURL Error: ' . $GLOBALS['webuzo_curl_err'] . ')';
-		} else {
-			$err .= ': Invalid response from Webuzo server or account username not found.';
-		}
-		
-		$direct_url = 'https://' . $tmp_hostname . ':' . $port . '/';
-		
-		echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Webuzo Login</title></head><body style="background:#f4f6f9;margin:0;padding:20px;">';
-		echo '<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 25px; border: 1px solid #f5c6cb; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">';
-		echo '<h3 style="color: #721c24; margin-top: 0;">Σφάλμα Αυτόματης Σύνδεσης Webuzo (SSO)</h3>';
-		echo '<p style="color: #495057; font-size: 14px;"><strong>Μήνυμα Webuzo:</strong> <span style="color:#d9534f;">' . htmlspecialchars($err) . '</span></p>';
-		echo '<div style="background: #f8f9fa; padding: 12px; border: 1px solid #e9ecef; border-radius: 4px; margin: 15px 0; font-size: 13px; color: #555;">';
-		echo '<strong>Server:</strong> ' . htmlspecialchars($tmp_hostname) . '<br>';
-		echo '<strong>Username Λογαριασμού:</strong> ' . htmlspecialchars($vars['username']) . '<br>';
-		echo '<strong>Port:</strong> ' . htmlspecialchars($port);
-		echo '</div>';
-		echo '<p style="margin-top: 25px;">';
-		echo '<a href="' . htmlspecialchars($direct_url) . '" target="_blank" style="display: inline-block; background: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold;">Απευθείας Σύνδεση στο Webuzo Panel &raquo;</a>';
-		echo '&nbsp;&nbsp;<a href="javascript:history.back()" style="color: #6c757d; text-decoration: none; padding: 10px 15px;">&laquo; Επιστροφή</a>';
-		echo '</p>';
-		echo '</div></body></html>';
-		exit;
-	}
-
-	$redirect_url = 'https://'.$tmp_hostname.':'.$port.'/'.$ret['done']['sess_token'].'/?as='.$ret['done']['sess_key'].'&goto_cp='.rawurlencode(webuzo_get_current_url());
-	
 	echo '<meta http-equiv="Refresh" content="0;url='.$redirect_url.'">';
 	exit;
 }
@@ -1762,6 +1775,24 @@ function webuzo_AdminSingleSignOn($params){
 
 	return $return;
 
+}
+
+function webuzo_ServiceSingleSignOn($params){
+	$return = array(
+		'success' => false,
+	);
+	
+	try {
+		$redirect_url = webuzo_generate_sso_url($params);
+		$return = array(
+			'success' => true,
+			'redirectTo' => $redirect_url,
+		);
+	} catch (\Exception $e) {
+		$return['errorMsg'] = $e->getMessage();
+	}
+	
+	return $return;
 }
 
 function webuzo_get_current_url(){
