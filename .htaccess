@@ -4,9 +4,6 @@ RewriteEngine on
 
 # WHMCS Sensitive Directories Protection (Security Check)
 RewriteRule ^vendor/(.*)$ - [F,L]
-RewriteRule ^includes/(.*)$ - [F,L]
-RewriteRule ^templates_c/(.*)$ - [F,L]
-RewriteRule ^crons/(.*)$ - [F,L]
 
 RewriteRule ^/?$ ./custom_page_template.php?cmsid=149&%{QUERY_STRING} [L] #lagom-homepage-mark
 RewriteRule ^/index.php/store/web-hosting-cpanel/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
