@@ -60,7 +60,7 @@ function webuzo_MetaData() {
 		'DisplayName' => 'Webuzo',
 		'DefaultNonSSLPort' => $GLOBALS['webuzo_conf']['panel_ports']['admin_nonssl'],
 		'DefaultSSLPort' => $GLOBALS['webuzo_conf']['panel_ports']['admin_ssl'],
-		'ServiceSingleSignOnLabel' => 'Login to Webuzo Enduser',
+		'ServiceSingleSignOnLabel' => 'Login to Webuzo',
 		'AdminSingleSignOnLabel' => 'Webuzo Admin Panel',
 		'ListAccountsUniqueIdentifierDisplayName' => 'Domain',
 		'ListAccountsUniqueIdentifierField' => 'domain',
@@ -1689,13 +1689,13 @@ function webuzo_ClientArea($params) {
 	
 	// Do we need to show Login to Webuzo button ? 
 	if(empty($GLOBALS['webuzo_conf']['client_ui']['hide_login_btn_hosting_info'])){
-		$url = webuzo_get_current_url();
-		$url = $url.(strstr($url, '?') ? '&' : '?').'modop=custom&a=sso';
+		$sso_label = (!empty($GLOBALS['webuzo_conf']['client_ui']['rename_login_button']) ? $GLOBALS['webuzo_conf']['client_ui']['rename_login_button'] : 'Login to Webuzo');
+		$sso_url = 'clientarea.php?action=productdetails&id=' . (int)$params['serviceid'] . '&dosinglesignon=1';
 		
-		$return .= '<p><a href="'.$url.'" class="btn btn-default" target="_blank">'.(!empty($GLOBALS['webuzo_conf']['client_ui']['rename_login_button']) ? $GLOBALS['webuzo_conf']['client_ui']['rename_login_button'] : 'Login to Webuzo').'</a>';
+		$return .= '<p><a href="'.$sso_url.'" class="btn btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> '.$sso_label.'</a>';
 		
 		if(!empty($params['producttype']) && $params['producttype'] == 'reselleraccount'){
-			$reseller_url = $url.'&r=1';
+			$reseller_url = $sso_url.'&r=1';
 			$return .= '&nbsp; <a href="'.$reseller_url.'" class="btn btn-default" target="_blank">Login to Webuzo (Reseller Panel)</a>';
 		}
 		
@@ -1771,17 +1771,27 @@ function webuzo_enduser_panel($vars){
 
 // Left menu in Clients Area Login function handler
 function webuzo_sso($vars){
-		
+	$id = !empty($vars['serviceid']) ? (int)$vars['serviceid'] : (!empty($_REQUEST['id']) ? (int)$_REQUEST['id'] : 0);
+	if(!empty($id)){
+		$sso_target = "clientarea.php?action=productdetails&id=" . $id . "&dosinglesignon=1";
+		if(!empty($_GET['r'])){
+			$sso_target .= "&r=1";
+		}
+		if(!headers_sent()){
+			header("Location: " . $sso_target);
+		}
+		echo '<meta http-equiv="Refresh" content="0;url='.$sso_target.'">';
+		echo '<script type="text/javascript">window.location.href = '.json_encode($sso_target).';</script>';
+		exit;
+	}
+	
 	if(!empty($vars['producttype']) && $vars['producttype'] == 'reselleraccount' && !empty($_GET['r'])){
-		// Login to Webuzo admin from WHMCS client panel for reseller accounts
 		webuzo_admin_panel($vars);
 	}else{
-		// Login to Webuzo admin from WHMCS client panel for non-reseller accounts
 		webuzo_enduser_panel($vars);
 	}
 	
 	return true;
-	
 }
 
 function webuzo_AdminSingleSignOn($params){
