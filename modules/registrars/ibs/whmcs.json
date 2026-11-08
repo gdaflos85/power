@@ -1,0 +1,45 @@
+{
+	"schema": "1.0",
+	"type": "whmcs-registrars",
+	"name": "ibs",
+	"license": "MIT",
+	"category": "domains",
+	"description": {
+		"name": "internet.bs v5.3.7",
+		"tagline": "A leading domain registration provider.",
+		"long": "## No Account yet? Signup [here](https://internetbs.net/newaccount.html) for free!",
+		"features": [
+			"Automated Domain Registrations, Transfers, Renewals & Deletions",
+			"Ability to View/Change Nameservers & WHOIS Info"
+		]
+	},
+	"logo": {
+		"filename": "logo.gif"
+	},
+	"support": {
+		"homepage": "https://internetbs.net",
+		"docs_url": "https://faq.internetbs.net/hc/en-gb",
+		"support_url": "https://internetbs.net/en/contact.html"
+	},
+	"authors": [
+		{
+			"name": "Team Internet Group PLC"
+		}
+	],
+	"_module": {
+		"description": "The Official Internet.bs Registrar Module. Get an account here: <a style=\"text-decoration:underline;\" target=\"blank_\" href=\"https://internetbs.net/newaccount.html\">https://internetbs.net/newaccount.html</a>",
+		"description_apikey": "Your Internet.bs ApiKey",
+		"description_apipassword": "Your Internet.bs Password",
+		"description_testmode": "Check this checkbox if you want to connect to the test server",
+		"description_feat_it_hide_whois": "Tick this box if you want to hide the information in the public whois for Admin/Billing/Technical contacts (.it)",
+		"description_feat_renew_on_transfer": "Tick this box if you want to add renewal after transferring .de and .nl domain",
+		"description_feat_dnssec": "Enables DNSSEC configuration on Client Area",
+		"description_feat_auto_fields": "Automatically add the include statement in dist.additionalfields.php. After WHMCS' cron, we check if the include statement is present. If not, it is added to the file accordingly. This feature is a temporary workaround until the refactoring of the additional fields mechanism of this module. As upgrading WHMCS is resetting the file in question, this feature should be handy. Read <a href=\"https://faq.internetbs.net/hc/en-gb/articles/13828327871773-WHMCS-Registrar-Module\" target=\"_blank\" style=\"text-decoration:underline;\">the documentation</a>.",
+		"description_feat_validate_fields": "Run additional domain fields validation on Shopping Cart Checkout.",
+		"description_feat_sync_idprotection": "Include Synchronizing TLD Settings in Registrar TLD Sync regarding Id Protection Support.",
+		"description_feat_dep_notification": "Please chose a department, if you want to have a ticket opened in case of errors returned by our API.",
+		"description_feat_validation": "Click on Save for testing your connection to the configured Internet.bs Backend System. Only in case it fails, an error will be shown.<br/><b>Your Server IP Address</b>",
+		"support_email": "info@support.internet.bs",
+		"repoUrl": "https://github.com/centralnicgroup-opensource/rtldev-middleware-whmcs"
+	}
+}

@@ -1,0 +1,147 @@
+{
+    "version": "1.0.0",
+    "type": "CMS",
+    "style": {
+        "active_style": "modern",
+        "color_scheme": "default",
+        "style_settings": {
+            "elements": {
+                "promo": "default",
+                "search": "primary"
+            },
+            "site": {
+                "secondary": "primary",
+                "banner": "default"
+            },
+            "layout": {
+                "navigation": "default",
+                "login": "default",
+                "loginSidebar": "secondary",
+                "extendedFooter":"gray"
+            },
+            "sidebar": {
+                "boxed": "primary",
+                "summary": "default",
+                "account": "default"
+            }
+        }
+    },
+    "layout": {
+        "website": {
+            "navigation_layout": "condensed",
+            "footer_layout": "extended"
+        },
+        "client-portal": {
+            "navigation_layout": "left-nav",
+            "footer_layout": "default"
+        },
+        "order-process":{
+            "navigation_layout": "condensed",
+            "footer_layout": "default"
+        }
+        
+    },
+    "pages": {
+        "announcements": {
+            "template": "default",
+            "display_type" :"website",
+            "config": {
+                "hideSidebar": "1",
+                "displayImages": "1"
+
+            }
+        },
+        "supportticketsubmit-stepone": {
+            "template": "boxes",
+            "display_type":"website", 
+            "config": {
+                "hideSidebar": "1"
+            }
+        },
+        "clientregister": {
+            "template": "default",
+            "display_type":"website", 
+            "config": {
+                "isFullPage": "1",
+                "showLogo": "1"
+            }
+        },
+        "clientareadomains": {
+            "template": "default",
+            "config": {
+                "hideSidebar": "1"
+            }
+        },
+        "knowledgebasearticle": {
+            "template": "default",
+            "display_type":"website",
+            "config": {
+                "hideSidebar": "1"
+            }
+        },
+        "knowledgebasecat": {
+            "template": "default",
+            "display_type":"website",
+            "config": {
+                "hideSidebar": "1"
+            }
+        },
+        "login": {
+            "template": "default",
+            "display_type":"website", 
+            "config": {
+                "isFullPage": "1",
+                "showLogo": "1"
+            }
+        },
+        "password-reset-container": {
+            "template": "default",
+            "config": {
+                "isFullPage": "1",
+                "showLogo": "1"
+            }
+        },
+        "clientareaproducts": {
+            "template": "default",
+            "config": {
+                "hideSidebar": "1"
+            }
+        },
+        "supportticketsubmit-steptwo": {
+            "template": "default",
+            "display_type":"website"
+        },
+        "supportticketslist": {
+            "template": "default",
+            "config": {
+                "hideSidebar" :"1"
+            }
+        },
+        "viewannouncement": {
+            "template": "default",
+            "display_type": "website", 
+            "config": {
+                "hideSidebar": "1"
+            }
+        },
+        "affiliatessignup":{
+            "template": "default",
+            "display_type": "website"
+        },
+        "domainregister":{
+            "template": "modern",
+            "config":{
+                "showFeaturedTLD": "1",
+                "showTLDCategoryFilter": "1"
+            }
+        }
+    },
+    "settings":{
+        "show_logo_url": "1",
+        "logo_url": "/",
+        "sticky_sidebars": "true",
+        "show_gravatar_image": "displayed",
+        "show_affixed_navigation": "enabled",
+        "show_status_icon": "displayed"
+    }
+}

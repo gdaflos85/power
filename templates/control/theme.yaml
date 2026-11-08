@@ -1,0 +1,13 @@
+# Control WHMCS Theme Configuration File
+
+name: "Control"
+description: "Control Theme for WHMCS"
+version: "2.17.0"
+serial: "d5a29416d3a0b5751c2326b073669ce6"
+author: "Impressive Themes"
+properties:
+  serverSidePagination: false # Defines client side will handle pagination
+provides:
+  bootstrap: 3.4.1
+  jquery: 1.12.4
+  fontawesome: 5.10.1

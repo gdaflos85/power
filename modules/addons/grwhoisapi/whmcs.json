@@ -1,0 +1,28 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-addons",
+  "name": "grwhoisapi",
+  "license": "proprietary",
+  "category": "domain",
+  "description": {
+    "name": "GR WHOIS API",
+    "tagline": "GR WHOIS API Consumer",
+    "long": "Use the new API for .gr TLD in order to check for unregistered domains.",
+    "features": [
+      "Free for grEPP2 owner with active support subscription"
+    ]
+  },
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "homepage": "https:\/\/www.valuehost.com.gr\/",
+    "docs_url": "https:\/\/bitbucket.org\/liagkos\/whmcs-grwhoisapi\/wiki\/Home"
+  },
+  "authors": [
+    {
+      "name": "Athanasios Liagkos",
+      "homepage": "https:\/\/www.valuehost.com.gr/"
+    }
+  ]
+}

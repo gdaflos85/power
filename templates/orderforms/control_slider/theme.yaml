@@ -1,0 +1,6 @@
+config:
+    parent: control_standard
+dependencies:
+  bootstrap: 3
+  jquery: 1.12
+  fontawesome: 5

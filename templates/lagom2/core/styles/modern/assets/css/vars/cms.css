@@ -1,0 +1,335 @@
+/*
+***************************************************************************************
+    1.  CMS Block
+    2.  Section General
+    3.  Section Combined/Overlay
+    4.  Section Graphic
+    5.  Content Slider 
+***************************************************************************************
+*/
+
+
+
+/*
+***************************************************************************************
+    1.  CMS Block
+***************************************************************************************
+*/
+
+:root{
+    --cms-block-bg:                                     var(--ui-block-bg);
+    --cms-block-shadow:                                 var(--box-shadow-lg);
+    --cms-block-border:                                 1px solid var(--gray-lighter-4); 
+    --cms-block-border-hover:                           1px solid var(--brand-primary);
+    --cms-block-border-lighter:                         1px solid var(--gray-faded);
+
+    --cms-block-divider-default-color:                  linear-gradient(270deg, #E9EAEC -1.59%, rgba(233, 234, 236, 0.4) 99.28%);
+    --cms-block-divider-primary-color:                  rgba(255,255,255, 0.16);
+    --cms-block-divider-secondary-color:                rgba(255,255,255, 0.16);
+    --cms-block-divider-gray-color:                     linear-gradient(270deg, #E9EAEC -1.59%, rgba(233, 234, 236, 0.4) 99.28%);
+
+    --cms-ui-icon-on-dark:                              rgba(204, 221, 255, 0.8);
+    --cms-on-dark-lighter-3:                            rgba(255, 255, 255, 0.34);
+    --cms-on-light-darker-3:                            #DEE0E3; /*--gray-lighter-3 - v2.3.0*/
+    --cms-on-light-darker-4:                            rgba(222, 224, 227, 0.6); /*--gray-lighter-3 - v2.3.0 + opacity .6*/
+
+    --cms-color-on-dark:                                #fff;
+    --cms-color-on-dark-2:                              rgba(255, 255, 255, 0.8);
+    --cms-color-on-dark-3:                              rgba(255, 255, 255, 0.16);
+
+    --cms-color-on-light:                                #17191C;
+    --cms-color-on-light-2:                              #5E636E;
+
+    --cms-line-color:                                   var(--brand-primary);
+    
+   --white-gradient:                                   linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+   --shape-light-gradient-start:                       #E3E6EB;
+   --shape-light-gradient-end:                         #E3E6EB;
+   --shape-dark-gradient-start:                        #A9B1BB;
+   --shape-dark-gradient-end:                          #A9B1BB;
+}
+
+/*
+***************************************************************************************
+2.  Section General
+***************************************************************************************
+*/
+
+:root {
+    --section-sides-content-max-width:                  532px;
+    --section-sides-features-content-max-width:         620px;
+    --section-sides-content-margin:                     auto; 
+    --section-sides-features-content-margin:            70px;
+    --section-legal-sidebar-width:                      290px;
+
+    --site-section-item-max-width:                      var(--max-width-md);
+    --site-section-padding-v:                           100px;
+    --site-section-padding-content-v:                   72px;
+
+    --section-side-graphic-spacing-v:                   200px;
+    --section-side-graphic-spacing-sm-v:                124px;
+
+    --section-side-title-above-spacing-v:               64px;
+
+    --section-caption-font-size:                        var(--font-size-h6);
+    --section-caption-line-height:                      var(--line-height-h6);
+    --section-caption-font-weight:                      var(--font-weight-h6);
+    --section-caption-color:                            var(--text-primary-color);
+
+    --section-subtitle-font-size:                       var(--site-banner-desc-font-size);
+    --section-subtitle-line-height:                     var(--site-banner-desc-line-height);
+    --section-subtitle-font-weight:                     var(--site-banner-desc-font-weight);
+    
+
+    --section-title-spacing-top:                        var(--spacing-3x);
+    --section-subtitle-spacing-top:                     var(--spacing-3x);
+    --section-actions-spacing-top:                      var(--spacing-4x);
+    --section-desc-spacing-top:                         var(--spacing-3x);
+    --section-form-spacing-top:                         var(--spacing-5x);
+    --section-content-spacing-top:                      var(--section-side-title-above-spacing-v);
+
+    --site-banner-item-max-width:                       var(--max-width-md);
+    --site-banner-graphic-width:                        var(--site-section-illustration-width);
+    
+    --section-primary-color-faded:                      rgba(255, 255, 255, 0.8);
+
+    --value-lg-font-size:                               56px;
+    --value-lg-line-height:                             62px;
+
+    --value-base-font-size:                             var(--font-size-h1);
+    --value-base-line-height:                           var(--line-height-h1);
+    --value-base-font-weight:                           var(--font-weight-bold);
+
+    --value-sm-font-size:                               var(--font-size-h2);
+    --value-sm-line-height:                             var(--line-height-h2);
+
+    /* from custom styles */
+    --cms-section-combined-lg-margin: var(--section-sides-content-padding-v);
+}
+@media (max-width: 1319px){
+    :root{
+        --section-sides-content-max-width:              532px;
+        --section-sides-features-content-max-width:     unset;
+        --section-sides-content-margin:                 50px;
+        --section-sides-features-content-margin:        50px;
+        --site-banner-graphic-width:                    510px;
+        --section-side-graphic-spacing-v:               124px;
+    }
+}
+@media (max-width: 991px){
+    :root{
+        /* --section-sides-content-max-width:              unset; */
+        /* --section-sides-features-content-margin:        unset; */
+        --section-side-title-above-spacing-v:               48px;
+
+        --section-title-spacing-top:                        var(--spacing-2x);
+        --section-subtitle-spacing-top:                     var(--spacing-3x);
+        --section-actions-spacing-top:                      var(--spacing-4x);
+        --section-desc-spacing-top:                         var(--spacing-3x);
+        --section-form-spacing-top:                         var(--spacing-5x);
+        --section-content-spacing-top:                      var(--section-side-title-above-spacing-v);
+    }
+}  
+@media (max-width: 767px){
+    :root{
+        --site-section-padding-v:                       72px;
+
+        --section-title-spacing-top:                        var(--spacing-1x);
+        --section-subtitle-spacing-top:                     var(--spacing-3x);
+        --section-actions-spacing-top:                      var(--spacing-3x);
+        --section-desc-spacing-top:                         var(--spacing-3x);
+        --section-form-spacing-top:                         var(--spacing-5x);
+        --section-content-spacing-top:                      var(--section-side-title-above-spacing-v);
+    }
+}
+
+/*
+***************************************************************************************
+    3.  Section Combined/Overlay
+***************************************************************************************
+*/
+
+:root{
+    --cms-section-overlay-margin:                       200px;
+    --cms-section-combined-margin:                      80px;
+}
+
+@media (max-width: 1319px){
+    :root{
+        --cms-section-overlay-margin:                   200px;
+        --cms-section-combined-margin:                  80px;
+    }
+}
+@media (max-width: 991px){
+    :root{
+        --cms-section-overlay-margin:                   200px;
+        --cms-section-combined-margin:                  80px;
+    }
+}
+@media (max-width: 767px){
+    :root{
+        --cms-section-overlay-margin:                   200px;
+        --cms-section-combined-margin:                  80px;
+    }
+}
+
+/*
+***************************************************************************************
+    4.  Section Graphic
+***************************************************************************************
+*/
+
+:root{
+     /* Min height only for desktop */
+    --section-sides-min-height:                         677px;
+
+    --section-sides-content-max-width:                  544px;
+    --section-sides-content-spacing-right:              80px;
+
+    --section-sides-graphic-width:                      596px;
+    --section-sides-graphic-height:                     480px;
+
+    --section-sides-graphic-shape-width:                2542px;
+    --section-sides-graphic-shape-height:               808px;
+    --section-sides-graphic-shape-right:                -1380px;
+
+    --section-sides-content-padding-v:                  100px;
+
+    --section-sides-background-margin-top:              100px;
+
+    --section-sides-promo-icon-margin-top:              -36px;
+
+}
+@media (max-width: 1319px){
+    :root{
+        --section-sides-content-max-width:              506px;
+        --section-sides-content-spacing-right:          56px;
+    
+        --section-sides-graphic-width:                  482px;
+        --section-sides-graphic-height:                 392px;
+    
+        --section-sides-graphic-shape-width:            2172px;
+        --section-sides-graphic-shape-height:           690px;
+        --section-sides-graphic-shape-right:            -1172px;
+    
+        --section-sides-promo-icon-margin-top:          -24px;
+    }
+}
+@media (max-width: 991px){
+    :root{
+        --section-sides-content-max-width:              432px;
+        --section-sides-content-spacing-right:          40px;
+    }
+
+}
+@media (max-width: 767px){
+    :root{
+        --section-sides-graphic-width:                  360px;
+        --section-sides-graphic-height:                 260px;
+    
+        --section-sides-content-spacing-right:          0; 
+    
+        --section-sides-graphic-shape-width:            1400px;
+        --section-sides-graphic-shape-height:           444px;
+        --section-sides-graphic-shape-right:            -762px;
+    
+        --section-sides-content-padding-v:              72px;
+    
+        --section-sides-background-margin-top:          72px;
+    
+        --section-sides-promo-icon-margin-top:          -50px;
+    }
+}
+
+/*
+***************************************************************************************
+    5.  CMS Content Slider
+***************************************************************************************
+*/
+
+:root{
+    /* package width with paddings on col */
+    --content-slider-package-width:                     286px;
+    --content-slider-item-padding-h:                    var(--spacing-2x);
+    --content-slider-item-width:                        calc(var(--content-slider-package-width) + var(--content-slider-item-padding-h) + var(--content-slider-item-padding-h));
+
+    --content-slider-container-max-w:                   1400px;
+    --content-slider-container-padding:                 80px;  
+
+    --content-slider-button-size:                       56px;
+
+    --content-slider-cover-width:                       80px;
+
+    --content-slider-cover-gradient-left:              linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    --content-slider-cover-gradient-right:               linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@media (max-width: 991px){
+    :root{
+        --content-slider-container-padding:                 24px;  
+
+        --content-slider-item-padding-h:                    12px;
+
+        --content-slider-button-size:                       32px;
+        --content-slider-cover-width:                       24px;
+    }
+}
+
+@media (max-width: 767px){
+    :root{
+        --content-slider-item-padding-h:                    var(--spacing-1x);
+        --content-slider-item-width:                        calc(var(--content-slider-package-width) + var(--content-slider-item-padding-h) + var(--content-slider-item-padding-h));
+    }
+}
+
+/*
+***************************************************************************************
+    6.  CMS Section Tabs
+***************************************************************************************
+*/
+
+:root{
+    --cms-section-tabs-boxed-bg:                              var(--ui-block-bg);
+    --cms-section-tabs-boxed-shadow:                          var(--box-shadow-lg);
+    --cms-section-tabs-boxed-border:                          none;
+    --cms-section-tabs-boxed-border-active:                   1px solid var(--brand-primary);
+    --cms-section-tabs-boxed-border-active-color:             var(--brand-primary);
+    --cms-section-tabs-boxed-border-radius:                   var(--border-radius-lg);
+    --cms-section-tabs-boxed-color:                           var(--nav-tabs-link-color);
+    --cms-section-tabs-boxed-color-hover:                     var(--nav-tabs-link-active-color);
+    --cms-section-tabs-boxed-color-active:                    var(--nav-tabs-link-active-color);
+    --cms-section-tabs-boxed-padding:                         var(--spacing-3x) var(--spacing-4x);
+    --cms-section-tabs-boxed-blur:                            none;
+}
+
+/*
+***************************************************************************************
+    7.  DMS Dark Mode Variables
+***************************************************************************************
+*/
+
+.lagom-dark-mode{
+    
+    --white-gradient:                                         linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
+
+    --shape-light-gradient-start:                             #303030;
+    --shape-light-gradient-end:                               #303030;
+    --shape-dark-gradient-start:                              #000000;
+    --shape-dark-gradient-end:                                #000000;
+
+    --cms-block-divider-default-color:                        var(--gray-lighter-4);
+    --cms-block-divider-gray-color:                           var(--gray-lighter-3);
+
+    --content-slider-cover-gradient-left:                     linear-gradient(90deg, #121212 0%, rgba(18, 18, 18, 0) 100.86%);
+
+    --content-slider-cover-gradient-right:                    linear-gradient(270deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
+
+    --cms-line-color:                                         var(--brand-primary-lighter);
+
+    --cms-block-border-hover:                                 1px solid var(--brand-primary-lighter);
+
+    --cms-section-tabs-boxed-border-active:                   1px solid var(--brand-primary-lighter);
+
+    --cms-section-tabs-boxed-border-active-color:             var(--brand-primary-lighter);
+}

@@ -1,0 +1,245 @@
+#LagomRedirection
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^/?$ ./custom_page_template.php?cmsid=149&%{QUERY_STRING} [L] #lagom-homepage-mark
+RewriteRule ^/index.php/store/web-hosting-cpanel/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
+RewriteRule ^/index.php/store/web-hosting-plesk/?$ ./custom_page_template.php?cmsid=91&%{QUERY_STRING} [L] #custom-page-91
+RewriteRule ^/index.php/store/reseller-hosting/?$ ./custom_page_template.php?cmsid=92&%{QUERY_STRING} [L] #custom-page-92
+RewriteRule ^/index.php/store/vps-hosting/?$ ./custom_page_template.php?cmsid=93&%{QUERY_STRING} [L] #custom-page-93
+RewriteRule ^/index.php/store/dedicated-servers/?$ ./custom_page_template.php?cmsid=94&%{QUERY_STRING} [L] #custom-page-94
+RewriteRule ^/index.php/store/dedicated/?$ ./custom_page_template.php?cmsid=95&%{QUERY_STRING} [L] #custom-page-95
+RewriteRule ^360-monitoring/?$ ./custom_page_template.php?cmsid=96&%{QUERY_STRING} [L] #custom-page-96
+RewriteRule ^email-services/archiving/?$ ./custom_page_template.php?cmsid=97&%{QUERY_STRING} [L] #custom-page-97
+RewriteRule ^email-services/incoming-filtering/?$ ./custom_page_template.php?cmsid=98&%{QUERY_STRING} [L] #custom-page-98
+RewriteRule ^email-services/outgoing-filtering/?$ ./custom_page_template.php?cmsid=99&%{QUERY_STRING} [L] #custom-page-99
+RewriteRule ^email-services/?$ ./custom_page_template.php?cmsid=100&%{QUERY_STRING} [L] #custom-page-100
+RewriteRule ^nord-vpn/?$ ./custom_page_template.php?cmsid=101&%{QUERY_STRING} [L] #custom-page-101
+RewriteRule ^professional-email/?$ ./custom_page_template.php?cmsid=102&%{QUERY_STRING} [L] #custom-page-102
+RewriteRule ^seo-tools/?$ ./custom_page_template.php?cmsid=103&%{QUERY_STRING} [L] #custom-page-103
+RewriteRule ^ssl-certificates/domain-validation/?$ ./custom_page_template.php?cmsid=104&%{QUERY_STRING} [L] #custom-page-104
+RewriteRule ^ssl-certificates/extended-validation/?$ ./custom_page_template.php?cmsid=105&%{QUERY_STRING} [L] #custom-page-105
+RewriteRule ^ssl-certificates/organization-validation/?$ ./custom_page_template.php?cmsid=106&%{QUERY_STRING} [L] #custom-page-106
+RewriteRule ^ssl-certificates/?$ ./custom_page_template.php?cmsid=107&%{QUERY_STRING} [L] #custom-page-107
+RewriteRule ^ssl-certificates2/?$ ./custom_page_template.php?cmsid=108&%{QUERY_STRING} [L] #custom-page-108
+RewriteRule ^kataskevi-eshop/?$ ./custom_page_template.php?cmsid=109&%{QUERY_STRING} [L] #custom-page-109
+RewriteRule ^sitelock-vpn/?$ ./custom_page_template.php?cmsid=110&%{QUERY_STRING} [L] #custom-page-110
+RewriteRule ^website-backup/?$ ./custom_page_template.php?cmsid=111&%{QUERY_STRING} [L] #custom-page-111
+RewriteRule ^kataskevi-istoselidas-ioannina/?$ ./custom_page_template.php?cmsid=112&%{QUERY_STRING} [L] #custom-page-112
+RewriteRule ^website-security/?$ ./custom_page_template.php?cmsid=113&%{QUERY_STRING} [L] #custom-page-113
+RewriteRule ^xovinow/?$ ./custom_page_template.php?cmsid=114&%{QUERY_STRING} [L] #custom-page-114
+RewriteRule ^svg-background/?$ ./custom_page_template.php?cmsid=115&%{QUERY_STRING} [L] #custom-page-115
+RewriteRule ^svg-cms-illustrations/?$ ./custom_page_template.php?cmsid=116&%{QUERY_STRING} [L] #custom-page-116
+RewriteRule ^svg-icons/?$ ./custom_page_template.php?cmsid=117&%{QUERY_STRING} [L] #custom-page-117
+RewriteRule ^svg-mc-illustrations/?$ ./custom_page_template.php?cmsid=118&%{QUERY_STRING} [L] #custom-page-118
+RewriteRule ^about-us/?$ ./custom_page_template.php?cmsid=119&%{QUERY_STRING} [L] #custom-page-119
+RewriteRule ^blog/article-1/?$ ./custom_page_template.php?cmsid=120&%{QUERY_STRING} [L] #custom-page-120
+RewriteRule ^blog/?$ ./custom_page_template.php?cmsid=121&%{QUERY_STRING} [L] #custom-page-121
+RewriteRule ^cloud-servers-layout-2/?$ ./custom_page_template.php?cmsid=122&%{QUERY_STRING} [L] #custom-page-122
+RewriteRule ^cloud-servers/?$ ./custom_page_template.php?cmsid=123&%{QUERY_STRING} [L] #custom-page-123
+RewriteRule ^partners/?$ ./custom_page_template.php?cmsid=124&%{QUERY_STRING} [L] #custom-page-124
+RewriteRule ^contact-us2/?$ ./custom_page_template.php?cmsid=125&%{QUERY_STRING} [L] #custom-page-125
+RewriteRule ^dedicated-servers/?$ ./custom_page_template.php?cmsid=126&%{QUERY_STRING} [L] #custom-page-126
+RewriteRule ^dedicated-servers-2/?$ ./custom_page_template.php?cmsid=127&%{QUERY_STRING} [L] #custom-page-127
+RewriteRule ^domain-names/?$ ./custom_page_template.php?cmsid=128&%{QUERY_STRING} [L] #custom-page-128
+RewriteRule ^domain-transfer/?$ ./custom_page_template.php?cmsid=129&%{QUERY_STRING} [L] #custom-page-129
+RewriteRule ^game-servers/7-days-to-die/?$ ./custom_page_template.php?cmsid=130&%{QUERY_STRING} [L] #custom-page-130
+RewriteRule ^game-servers/arka/?$ ./custom_page_template.php?cmsid=131&%{QUERY_STRING} [L] #custom-page-131
+RewriteRule ^game-servers/arma-3/?$ ./custom_page_template.php?cmsid=132&%{QUERY_STRING} [L] #custom-page-132
+RewriteRule ^game-servers/conan-exiles/?$ ./custom_page_template.php?cmsid=133&%{QUERY_STRING} [L] #custom-page-133
+RewriteRule ^game-servers/core-keeper/?$ ./custom_page_template.php?cmsid=134&%{QUERY_STRING} [L] #custom-page-134
+RewriteRule ^game-servers/counter-strike/?$ ./custom_page_template.php?cmsid=135&%{QUERY_STRING} [L] #custom-page-135
+RewriteRule ^game-servers/day-z/?$ ./custom_page_template.php?cmsid=136&%{QUERY_STRING} [L] #custom-page-136
+RewriteRule ^game-servers/gta-5/?$ ./custom_page_template.php?cmsid=137&%{QUERY_STRING} [L] #custom-page-137
+RewriteRule ^game-servers/games/?$ ./custom_page_template.php?cmsid=138&%{QUERY_STRING} [L] #custom-page-138
+RewriteRule ^game-servers-layout-2/?$ ./custom_page_template.php?cmsid=139&%{QUERY_STRING} [L] #custom-page-139
+RewriteRule ^game-servers/?$ ./custom_page_template.php?cmsid=140&%{QUERY_STRING} [L] #custom-page-140
+RewriteRule ^game-servers/minecraft/?$ ./custom_page_template.php?cmsid=141&%{QUERY_STRING} [L] #custom-page-141
+RewriteRule ^game-servers/project-zomboid/?$ ./custom_page_template.php?cmsid=142&%{QUERY_STRING} [L] #custom-page-142
+RewriteRule ^game-servers/rust/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #custom-page-143
+RewriteRule ^game-servers/space-engineers/?$ ./custom_page_template.php?cmsid=144&%{QUERY_STRING} [L] #custom-page-144
+RewriteRule ^game-servers/terraria/?$ ./custom_page_template.php?cmsid=145&%{QUERY_STRING} [L] #custom-page-145
+RewriteRule ^game-servers/the-forest/?$ ./custom_page_template.php?cmsid=146&%{QUERY_STRING} [L] #custom-page-146
+RewriteRule ^game-servers/v-rising/?$ ./custom_page_template.php?cmsid=147&%{QUERY_STRING} [L] #custom-page-147
+RewriteRule ^game-servers/valheim/?$ ./custom_page_template.php?cmsid=148&%{QUERY_STRING} [L] #custom-page-148
+#RewriteRule ^home/?$ ./custom_page_template.php?cmsid=149&%{QUERY_STRING} [L] #custom-page-149
+RewriteRule ^knowledgebase-cms/?$ ./custom_page_template.php?cmsid=150&%{QUERY_STRING} [L] #custom-page-150
+RewriteRule ^legal/terms-of-services/?$ ./custom_page_template.php?cmsid=153&%{QUERY_STRING} [L] #custom-page-153
+RewriteRule ^legal/privacy-policy/?$ ./custom_page_template.php?cmsid=154&%{QUERY_STRING} [L] #custom-page-154
+RewriteRule ^reseller-hosting/?$ ./custom_page_template.php?cmsid=155&%{QUERY_STRING} [L] #custom-page-155
+RewriteRule ^reseller-hosting-1/?$ ./custom_page_template.php?cmsid=156&%{QUERY_STRING} [L] #custom-page-156
+RewriteRule ^web-hosting/?$ ./custom_page_template.php?cmsid=157&%{QUERY_STRING} [L] #custom-page-157
+RewriteRule ^shared-hosting/?$ ./custom_page_template.php?cmsid=158&%{QUERY_STRING} [L] #custom-page-158
+RewriteRule ^vps-hosting/?$ ./custom_page_template.php?cmsid=159&%{QUERY_STRING} [L] #custom-page-159
+RewriteRule ^vps-hosting-3/?$ ./custom_page_template.php?cmsid=160&%{QUERY_STRING} [L] #custom-page-160
+RewriteRule ^wordpress-hosting-layout-2/?$ ./custom_page_template.php?cmsid=161&%{QUERY_STRING} [L] #custom-page-161
+RewriteRule ^wordpress-hosting/?$ ./custom_page_template.php?cmsid=162&%{QUERY_STRING} [L] #custom-page-162
+RewriteRule ^section/banner-default/?$ ./custom_page_template.php?cmsid=163&%{QUERY_STRING} [L] #custom-page-163
+RewriteRule ^section/banner-domain/?$ ./custom_page_template.php?cmsid=164&%{QUERY_STRING} [L] #custom-page-164
+RewriteRule ^section/banner-form/?$ ./custom_page_template.php?cmsid=165&%{QUERY_STRING} [L] #custom-page-165
+RewriteRule ^section/cta/?$ ./custom_page_template.php?cmsid=166&%{QUERY_STRING} [L] #custom-page-166
+RewriteRule ^section/styles/?$ ./custom_page_template.php?cmsid=167&%{QUERY_STRING} [L] #custom-page-167
+RewriteRule ^section/domain-search/?$ ./custom_page_template.php?cmsid=168&%{QUERY_STRING} [L] #custom-page-168
+RewriteRule ^section/faq/?$ ./custom_page_template.php?cmsid=169&%{QUERY_STRING} [L] #custom-page-169
+RewriteRule ^section/featured-tlds/?$ ./custom_page_template.php?cmsid=170&%{QUERY_STRING} [L] #custom-page-170
+RewriteRule ^section/features-sides/?$ ./custom_page_template.php?cmsid=171&%{QUERY_STRING} [L] #custom-page-171
+RewriteRule ^section/features/?$ ./custom_page_template.php?cmsid=172&%{QUERY_STRING} [L] #custom-page-172
+RewriteRule ^section/gallery/?$ ./custom_page_template.php?cmsid=173&%{QUERY_STRING} [L] #custom-page-173
+RewriteRule ^section/graphics/?$ ./custom_page_template.php?cmsid=174&%{QUERY_STRING} [L] #custom-page-174
+RewriteRule ^section/key-features/?$ ./custom_page_template.php?cmsid=175&%{QUERY_STRING} [L] #custom-page-175
+RewriteRule ^section/location-map/?$ ./custom_page_template.php?cmsid=176&%{QUERY_STRING} [L] #custom-page-176
+RewriteRule ^section/product-comparison/?$ ./custom_page_template.php?cmsid=177&%{QUERY_STRING} [L] #custom-page-177
+RewriteRule ^section/product-groups/?$ ./custom_page_template.php?cmsid=178&%{QUERY_STRING} [L] #custom-page-178
+RewriteRule ^section/products/?$ ./custom_page_template.php?cmsid=179&%{QUERY_STRING} [L] #custom-page-179
+RewriteRule ^section/stats/?$ ./custom_page_template.php?cmsid=180&%{QUERY_STRING} [L] #custom-page-180
+RewriteRule ^section/tlds-table/?$ ./custom_page_template.php?cmsid=181&%{QUERY_STRING} [L] #custom-page-181
+RewriteRule ^section/testimonials/?$ ./custom_page_template.php?cmsid=182&%{QUERY_STRING} [L] #custom-page-182
+RewriteRule ^promotion-black-week/?$ ./custom_page_template.php?cmsid=183&%{QUERY_STRING} [L] #custom-page-183
+RewriteRule ^promotion-christmas-sale/?$ ./custom_page_template.php?cmsid=184&%{QUERY_STRING} [L] #custom-page-184
+RewriteRule ^promotion-cyber-monday/?$ ./custom_page_template.php?cmsid=185&%{QUERY_STRING} [L] #custom-page-185
+RewriteRule ^promotion-expired-default/?$ ./custom_page_template.php?cmsid=186&%{QUERY_STRING} [L] #custom-page-186
+RewriteRule ^promotion-default/?$ ./custom_page_template.php?cmsid=187&%{QUERY_STRING} [L] #custom-page-187
+RewriteRule ^promotion-easter-sale/?$ ./custom_page_template.php?cmsid=188&%{QUERY_STRING} [L] #custom-page-188
+RewriteRule ^promotion-halloween-sale/?$ ./custom_page_template.php?cmsid=189&%{QUERY_STRING} [L] #custom-page-189
+RewriteRule ^promotion-new-year-sale/?$ ./custom_page_template.php?cmsid=190&%{QUERY_STRING} [L] #custom-page-190
+RewriteRule ^promotion-spring-sale/?$ ./custom_page_template.php?cmsid=191&%{QUERY_STRING} [L] #custom-page-191
+RewriteRule ^promotion-summer-sale/?$ ./custom_page_template.php?cmsid=192&%{QUERY_STRING} [L] #custom-page-192
+RewriteRule ^promotion-valentines-sale/?$ ./custom_page_template.php?cmsid=193&%{QUERY_STRING} [L] #custom-page-193
+RewriteRule ^promotion-winter-sale/?$ ./custom_page_template.php?cmsid=194&%{QUERY_STRING} [L] #custom-page-194
+RewriteRule ^contact-us/?$ ./custom_page_template.php?cmsid=196&%{QUERY_STRING} [L] #custom-page-196
+RewriteRule ^kataskevi-istoselidas-ioannina_duplicate_1/?$ ./custom_page_template.php?cmsid=197&%{QUERY_STRING} [L] #custom-page-197
+RewriteRule ^legal/terms-of-services_domains/?$ ./custom_page_template.php?cmsid=198&%{QUERY_STRING} [L] #custom-page-198
+RewriteRule ^legal/terms-of-services_shared_hosting/?$ ./custom_page_template.php?cmsid=199&%{QUERY_STRING} [L] #custom-page-199
+RewriteRule ^legal/terms-of-services_reseller_hosting/?$ ./custom_page_template.php?cmsid=200&%{QUERY_STRING} [L] #custom-page-200
+RewriteRule ^legal/terms-of-services_vps_cloud/?$ ./custom_page_template.php?cmsid=201&%{QUERY_STRING} [L] #custom-page-201
+RewriteRule ^legal/terms-of-services_dedicated_server/?$ ./custom_page_template.php?cmsid=202&%{QUERY_STRING} [L] #custom-page-202
+RewriteRule ^legal/terms-of-services_ssl_certificates/?$ ./custom_page_template.php?cmsid=203&%{QUERY_STRING} [L] #custom-page-203
+RewriteRule ^legal/terms-of-services_payments_and_Invoicing/?$ ./custom_page_template.php?cmsid=204&%{QUERY_STRING} [L] #custom-page-204
+RewriteRule ^legal/terms-of-services_limitation_of_liability/?$ ./custom_page_template.php?cmsid=205&%{QUERY_STRING} [L] #custom-page-205
+RewriteRule ^legal/terms-of-services_acceptable_use_policy/?$ ./custom_page_template.php?cmsid=206&%{QUERY_STRING} [L] #custom-page-206
+RewriteRule ^legal/terms-of-services_gdpr/?$ ./custom_page_template.php?cmsid=207&%{QUERY_STRING} [L] #custom-page-207
+RewriteRule ^kataskevi-istoselidas-preveza/?$ ./custom_page_template.php?cmsid=246&%{QUERY_STRING} [L]
+RewriteRule ^kataskevi-istoselidas-thessaloniki/?$ ./custom_page_template.php?cmsid=247&%{QUERY_STRING} [L]
+RewriteRule ^kataskevi-istoselidas-patra/?$ ./custom_page_template.php?cmsid=248&%{QUERY_STRING} [L]
+RewriteRule ^kataskevi-istoselidas-larissa/?$ ./custom_page_template.php?cmsid=[249&%{QUERY_STRING} [L]
+RewriteRule ^kataskevi-istoselidas-kerkyra/?$ ./custom_page_template.php?cmsid=250&%{QUERY_STRING} [L]
+RewriteRule ^kataskevi-istoselidas-arta/?$ ./custom_page_template.php?cmsid=209&%{QUERY_STRING} [L]
+RewriteRule ^kataskevi-istoselidon/?$ ./custom_page_template.php?cmsid=208&%{QUERY_STRING} [L]
+#LagomPagesRedirection
+</IfModule>
+#EndLagomRedirection
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+
+### BEGIN - WHMCS managed rules - DO NOT EDIT BETWEEN WHMCS MARKERS ###
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# Force Canonical WWW (Fixes Seobility Error 1)
+RewriteCond %{HTTP_HOST} ^powerhosting\.gr$ [NC]
+RewriteRule ^(.*)$ https://www.powerhosting.gr/$1 [R=301,L]
+
+
+# RewriteBase is set to "/" so rules do not need updating if the
+# installation directory is relocated.  It is imperative that
+# there is also a RewriteCond rule later that can effectively get
+# the actual value by comparison against the request URI.
+#
+# If there are _any_ other RewriteBase directives in this file,
+# the last entry will take precedence!
+RewriteBase /
+
+# Redirect directories to an address with slash
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$  $1/ [R]
+
+# Send all remaining (routable paths) through index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Determine and use the actual base
+RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^.*$ %2index.php [QSA,L]
+RedirectMatch 403 ^/vendor/
+</IfModule>
+### END - WHMCS managed rules - DO NOT EDIT BETWEEN WHMCS MARKERS
+
+# ==============================================================================
+# POWER HOSTING - SPEED & PERFORMANCE OPTIMIZATIONS
+# ==============================================================================
+
+# 1. Enable PHP OPcache
+<IfModule mod_php.c>
+    php_flag opcache.enable On
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag opcache.enable On
+</IfModule>
+php_flag opcache.enable On
+
+# 2. Gzip / Deflate Compression (Reduces CSS/JS/HTML size by 70%)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# 3. Browser Caching (Instant load for returning visitors & page switches)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # HTML / Dynamic Pages (No cache to prevent stale account info)
+    ExpiresByType text/html "access plus 0 seconds"
+
+    # CSS & JavaScript (1 Year cache - Lagom uses version hashes)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+
+    # Images (1 Year cache)
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Web Fonts (1 Year cache)
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+</IfModule>
+
+# 4. Cache-Control Headers for Static Files
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|woff2|woff|ttf|otf|eot|svg|png|jpg|jpeg|webp|gif|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    Header set Connection keep-alive
+</IfModule>

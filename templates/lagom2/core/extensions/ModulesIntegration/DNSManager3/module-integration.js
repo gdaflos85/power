@@ -1,0 +1,1 @@
+$(window).on("resize",function(){setTimeout(function(){document.documentElement.style.setProperty('--scrollbar-width',(window.innerWidth-document.documentElement.clientWidth)+"px")},1000)}).resize()

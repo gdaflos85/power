@@ -1,0 +1,7 @@
+[
+    {
+        "extensions": ".gr,.com.gr,.net.gr,.org.gr,.edu.gr,.gov.gr,.ел",
+        "uri": "https://billing.powerhosting.gr/modules/addons/grwhoisapi/consumer.php?domain=",
+        "available": "not exist"
+    }
+]

@@ -1,0 +1,394 @@
+/*!
+ * Theme Name: Lagom WHMCS Client Theme
+ * Theme URL: https://lagom.rsstudio.net/
+ *
+ * Terms of Service: https://lagom.rsstudio.net/docs/legal/terms-of-service.html
+ * 
+ * Copyright (c) 2021 RS Studio
+ */
+
+ :root {
+    /* START PARSE */
+
+    /* Section: Gray; Index: 0; */
+    --color-empty:                                  unset; /* name: Empty; type: hidden */
+
+    --gray-base:                                    #5E636E; /* name: Main; */
+    --gray-lighter:                                 #979BA4; /* name: Lighter; */
+    --gray-lighter-2:                               #ACB0B9; /* name: Lighter 2; */
+    --gray-lighter-3:                               #DEE0E3; /* name: Lighter 3; */
+    --gray-lighter-4:                               #EFEFF1; /* name: Lighter 4; */
+    --gray-faded:                                   #F7F7F8; /* name: Lighter 5; */
+    --gray-darker:                                  #17191C; /* name: Darker; */
+    --gray-gradient-start:                          #FCFCFD; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --gray-gradient-end:                            #F3F5F7; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --gray-gradient-h:                              linear-gradient( 270deg, var(--gray-gradient-start) 0%, var(--gray-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --gray-gradient-v:                              linear-gradient( 0deg, var(--gray-gradient-end) 0%, var(--gray-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+ 
+    /* Section: Primary */
+
+    --brand-primary:                                #e87a2c; /* name: Main; color_preview: primary;*/
+    --brand-primary-lighter:                        #f59033; /* name: Lighter; */
+    --brand-primary-lighter-2:                      #FBDBBB; /* name: Lighter 2; */
+    --brand-primary-lighter-3:                      #FCE5CF; /* name: Lighter 3; */
+    --brand-primary-lighter-4:                      #FEF2E7; /* name: Lighter 4; */
+    --brand-primary-darker:                         #ba4526; /* name: Darker; */
+    --brand-primary-gradient-start:                 #e87a2c; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --brand-primary-gradient-end:                   #FE9F15; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --brand-primary-gradient-h:                     linear-gradient( 90deg, var(--brand-primary-gradient-start) 0%, var(--brand-primary-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --brand-primary-gradient-v:                     linear-gradient( 0deg, var(--brand-primary-gradient-end) 0%, var(--brand-primary-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    /* Section: Secondary */
+
+    --brand-secondary:                              #D75E1A; /* name: Main; color_preview: secondary; */
+    --brand-secondary-lighter:                      #F2905A; /* name: Lighter; */
+    --brand-secondary-darker:                       #C24A16; /* name: Darker; */
+    --brand-secondary-gradient-start:               #C24A16; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --brand-secondary-gradient-end:                 #D75E1A; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --brand-secondary-gradient-h:                   linear-gradient( 90deg, var(--brand-secondary-gradient-start) 0%, var(--brand-secondary-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --brand-secondary-gradient-v:                   linear-gradient( 0deg, var(--brand-secondary-gradient-end) 0%, var(--brand-secondary-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    /* Section: Info */
+    
+    --brand-info:                                   #1062fe; /* name: Main; */
+    --brand-info-lighter:                           #009AFF; /* name: Lighter; */
+    --brand-info-lighter-2:                         #B3CCFF; /* name: Lighter 2; */
+    --brand-info-lighter-3:                         #D6E4FF; /* name: Lighter 3; */
+    --brand-info-lighter-4:                         #E0EBFF; /* name: Lighter 4; */
+    --brand-info-darker:                            #015abe; /* name: Darker; */
+    --brand-info-gradient-start:                    #015abe; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --brand-info-gradient-end:                      #1062fe; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --brand-info-gradient-h:                        linear-gradient( 90deg, var(--brand-info-gradient-start) 0%, var(--brand-info-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --brand-info-gradient-v:                        linear-gradient( 0deg, var(--brand-info-gradient-end) 0%, var(--brand-info-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+    
+    /* Section: Success */
+
+    --brand-success:                                #299341; /* name: Main; */
+    --brand-success-lighter:                        #70D786; /* name: Lighter; */
+    --brand-success-lighter-2:                      #BFEEC9; /* name: Lighter 2; */
+    --brand-success-lighter-3:                      #CFF2D7; /* name: Lighter 3; */
+    --brand-success-lighter-4:                      #DFF6E5; /* name: Lighter 4; */
+    --brand-success-darker:                         #26873C; /* name: Darker; */
+    --brand-success-gradient-start:                 #26873C; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --brand-success-gradient-end:                   #299341; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --brand-success-gradient-h:                     linear-gradient( 90deg, var(--brand-success-gradient-start) 0%, var(--brand-success-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --brand-success-gradient-v:                     linear-gradient( 0deg, var(--brand-success-gradient-end) 0%, var(--brand-success-gradient-end) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+    
+    /* Section: Warning */
+    
+    --brand-warning:                                #E07800; /* name: Main; */
+    --brand-warning-lighter:                        #FFB866; /* name: Lighter; */
+    --brand-warning-lighter-2:                      #FFDEB8; /* name: Lighter 2; */
+    --brand-warning-lighter-3:                      #FFE7CC; /* name: Lighter 3; */
+    --brand-warning-lighter-4:                      #FFF1E0; /* name: Lighter 4; */
+    --brand-warning-darker:                         #CC6D00; /* name: Darker; */
+    --brand-warning-gradient-start:                 #CC6D00; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --brand-warning-gradient-end:                   #E07800; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --brand-warning-gradient-h:                     linear-gradient( 90deg, var(--brand-warning-gradient-start) 0%, var(--brand-warning-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --brand-warning-gradient-v:                     linear-gradient( 0deg, var(--brand-warning-gradient-end) 0%, var(--brand-warning-gradient-start) 100%);/* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    /* Section: Danger */
+
+    --brand-danger:                                 #D92632; /* name: Main; */
+    --brand-danger-lighter:                         #E56C74; /* name: Lighter; */
+    --brand-danger-lighter-2:                       #F4C3C6; /* name: Lighter 2; */
+    --brand-danger-lighter-3:                       #FAE1E2; /* name: Lighter 3; */
+    --brand-danger-lighter-4:                       #FCEEEF; /* name: Lighter 4; */
+    --brand-danger-darker:                          #B6202A; /* name: Darker; */
+    --brand-danger-gradient-start:                  #B6202A; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --brand-danger-gradient-end:                    #D92632; /* name: Gradient End; type: gradientColor; gradientColor: end; */    
+    --brand-danger-gradient-h:                      linear-gradient( 90deg, var(--brand-danger-gradient-start) 0%, var(--brand-danger-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --brand-danger-gradient-v:                      linear-gradient( 0deg, var(--brand-danger-gradient-end) 0%, var(--brand-danger-gradient-start) 100%);/* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    /* Section: UI Icon */
+
+    --gray-icons:                                   #ACAFB9; /* name: Icon; */
+    --gray-icons-hover:                             #e87a2c; /* name: Icon Hover; */
+
+    /* Section: SVG Illustrations */
+
+    --svg-illustration-gray-1:                      #393E41; /* name: Gray Base ; type: hiddenlist;*/
+    --svg-illustration-gray-2:                      #4F5357; /* name: Gray Lighter; type: hiddenlist; */
+    --svg-illustration-gray-3:                      #CBCFD5; /* name: Gray Lighter 2; type: hiddenlist; */
+    --svg-illustration-gray-4:                      #DADCDE; /* name: Gray Lighter 3; type: hiddenlist; */
+    --svg-illustration-gray-5:                      #DCDEE1; /* name: Gray Lighter 4; type: hiddenlist; */
+    --svg-illustration-gray-6:                      #E9EBEE; /* name: Gray Lighter 5; type: hiddenlist; */
+    --svg-illustration-gray-7:                      #EBEDF0; /* name: Gray Lighter 6; type: hiddenlist; */
+    --svg-illustration-gray-8:                      #EAEEF3; /* name: Gray Lighter 7; type: hiddenlist; */
+    --svg-illustration-gray-w:                      #ffffff; /* name: White; type: hiddenlist; */
+    --svg-illustration-shadow:                      #000000;
+
+    --svg-illustration-primary-0:                   #B55009; /* name: Primary Darker ; type: hiddenlist;*/
+    --svg-illustration-primary-1:                   #E87A2C; /* name: Primary Base ; type: hiddenlist;*/
+    --svg-illustration-primary-2:                   #F38636; /* name: Primary - Lighter; type: hiddenlist; */
+    --svg-illustration-primary-3:                   #FF9D56; /* name: Primary - Lighter 2; type: hiddenlist; */
+    --svg-illustration-primary-4:                   #FFAB6E; /* name: Primary - Lighter 3; type: hiddenlist; */
+      
+    --svg-illustration-yellow-1:                    #F9A000; /* name: Yellow - Base; type: hiddenlist; */
+    --svg-illustration-yellow-2:                    #FBB900; /* name: Yellow - Lighter; type: hiddenlist; */
+    --svg-illustration-yellow-3:                    #FFD251; /* name: Yellow - Lighter 2; type: hiddenlist; */
+    --svg-illustration-yellow-4:                    #FBC666; /* name: Yellow - Lighter 3; type: hiddenlist; */
+    --svg-illustration-yellow-5:                    #FCDA83; /* name: Yellow - Lighter 4; type: hiddenlist; */
+      
+    --svg-illustration-green-1:                     #1F5C3A; /* name: Green - Base; type: hiddenlist; */
+    --svg-illustration-green-2:                     #31854C; /* name: Green - Lighter; type: hiddenlist; */
+    --svg-illustration-green-3:                     #35B65E; /* name: Green - Lighter 2; type: hiddenlist; */
+    --svg-illustration-green-4:                     #5BD682; /* name: Green - Lighter 3; type: hiddenlist; */
+
+    --svg-illustration-line-color:                  rgba(192, 192, 192, 0.3);
+
+    --svg-banner-shape-left:                        var(--brand-primary);
+    --svg-banner-shape-right:                       var(--brand-primary-lighter);
+
+    /* Section: Background */
+
+    --body-bg:                                      #fff; /* name: Body; type: hiddenlist; */
+
+}
+
+.lagom-dark-mode{
+    /* Section: Dark Mode Gray; */
+
+    --dark-mode-gray-base:                                      #B3B3B3; /* name: Main; */
+    --dark-mode-gray-lighter:                                   #8C8C8C; /* name: Lighter; */
+    --dark-mode-gray-lighter-2:                                 #666666; /* name: Lighter 2; */
+    --dark-mode-gray-lighter-3:                                 #424242; /* name: Lighter 3; */
+    --dark-mode-gray-lighter-4:                                 #303030; /* name: Lighter 4; */
+    --dark-mode-gray-faded:                                     #2B2B2B; /* name: Lighter 5; */
+    --dark-mode-gray-darker:                                    #E0E0E0; /* name: Darker; */
+    --dark-mode-gray-gradient-start:                            #1A1A1A; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-gray-gradient-end:                              #212121; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-gray-gradient-h:                                linear-gradient( 90deg, var(--dark-mode-gray-gradient-start) 0%, var(--dark-mode-gray-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-gray-gradient-v:                                linear-gradient( 0deg, var(--dark-mode-gray-gradient-end) 0%, var(--dark-mode-gray-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+    
+    --gray-base:                                                var(--dark-mode-gray-base);
+    --gray-lighter:                                             var(--dark-mode-gray-lighter);
+    --gray-lighter-2:                                           var(--dark-mode-gray-lighter-2);
+    --gray-lighter-3:                                           var(--dark-mode-gray-lighter-3);
+    --gray-lighter-4:                                           var(--dark-mode-gray-lighter-4);
+    --gray-faded:                                               var(--dark-mode-gray-faded);
+    --gray-darker:                                              var(--dark-mode-gray-darker);
+    --gray-gradient-start:                                      var(--dark-mode-gray-gradient-start);
+    --gray-gradient-end:                                        var(--dark-mode-gray-gradient-end);
+    --gray-gradient-h:                                          linear-gradient( 90deg, var(--dark-mode-gray-gradient-start) 0%, var(--dark-mode-gray-gradient-end) 100%);
+    --gray-gradient-v:                                          linear-gradient( 0deg, var(--dark-mode-gray-gradient-end) 0%, var(--dark-mode-gray-gradient-start) 100%);
+
+    /* Section: Dark Mode Primary */
+
+    --dark-mode-brand-primary:                                  #e87a2c; /* name: Main; color_preview: primary; */
+    --dark-mode-brand-primary-lighter:                          #f59033; /* name: Lighter; */
+    --dark-mode-brand-primary-lighter-2:                        #58361D; /* name: Lighter 2; */
+    --dark-mode-brand-primary-lighter-3:                        #3D2514; /* name: Lighter 3; */
+    --dark-mode-brand-primary-lighter-4:                        #362112; /* name: Lighter 4; */
+    --dark-mode-brand-primary-darker:                           #ba4526; /* name: Darker; */
+    --dark-mode-brand-primary-gradient-start:                   #e87a2c; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-brand-primary-gradient-end:                     #FE9F15; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-brand-primary-gradient-h:                       linear-gradient(90deg, var(--brand-primary-gradient-start) 0%, var(--brand-primary-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-brand-primary-gradient-v:                       linear-gradient(0deg, var(--brand-primary-gradient-end) 0%, var(--brand-primary-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    --brand-primary:                                            var(--dark-mode-brand-primary);
+    --brand-primary-lighter:                                    var(--dark-mode-brand-primary-lighter);
+    --brand-primary-lighter-2:                                  var(--dark-mode-brand-primary-lighter-2);
+    --brand-primary-lighter-3:                                  var(--dark-mode-brand-primary-lighter-3);
+    --brand-primary-lighter-4:                                  var(--dark-mode-brand-primary-lighter-4);
+    --brand-primary-darker:                                     var(--dark-mode-brand-primary-darker);
+    --brand-primary-gradient-start:                             var(--dark-mode-brand-primary-gradient-start);
+    --brand-primary-gradient-end:                               var(--dark-mode-brand-primary-gradient-end);
+    --brand-primary-gradient-h:                                 linear-gradient( 90deg, var(--dark-mode-brand-primary-gradient-start) 0%, var(--dark-mode-brand-primary-gradient-end) 100%);
+    --brand-primary-gradient-v:                                 linear-gradient( 0deg, var(--dark-mode-brand-primary-gradient-end) 0%, var(--dark-mode-brand-primary-gradient-start) 100%);
+
+    /* Section: Dark Mode Secondary */
+
+    --dark-mode-brand-secondary:                                #D75E1A; /* name: Main; color_preview: secondary; */
+    --dark-mode-brand-secondary-lighter:                        #F2905A; /* name: Lighter; */
+    --dark-mode-brand-secondary-darker:                         #C24A16; /* name: Darker; */
+    --dark-mode-brand-secondary-gradient-start:                 #C24A16; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-brand-secondary-gradient-end:                   #D75E1A; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-brand-secondary-gradient-h:                     linear-gradient( 90deg, var(--brand-secondary-gradient-start) 0%, var(--brand-secondary-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-brand-secondary-gradient-v:                     linear-gradient( 0deg, var(--brand-secondary-gradient-end) 0%, var(--brand-secondary-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    --brand-secondary:                                          var(--dark-mode-brand-secondary);
+    --brand-secondary-lighter:                                  var(--dark-mode-brand-secondary-lighter);
+    --brand-secondary-darker:                                   var(--dark-mode-brand-secondary-darker);
+    --brand-secondary-gradient-start:                           var(--dark-mode-brand-secondary-gradient-start);
+    --brand-secondary-gradient-end:                             var(--dark-mode-brand-secondary-gradient-end);
+    --brand-secondary-gradient-h:                               linear-gradient( 90deg, var(--dark-mode-brand-secondary-gradient-start) 0%, var(--dark-mode-brand-secondary-gradient-end) 100%);
+    --brand-secondary-gradient-v:                               linear-gradient( 0deg, var(--dark-mode-brand-secondary-gradient-end) 0%, var(--dark-mode-brand-secondary-gradient-start) 100%);
+
+    /* Section: Dark Mode Info */
+
+    --dark-mode-brand-info:                                     #1062FE; /* name: Main; */
+    --dark-mode-brand-info-lighter:                             #337AFF; /* name: Lighter; */
+    --dark-mode-brand-info-lighter-2:                           #162E5A; /* name: Lighter 2; */
+    --dark-mode-brand-info-lighter-3:                           #142A52; /* name: Lighter 3; */
+    --dark-mode-brand-info-lighter-4:                           #102242; /* name: Lighter 4; */
+    --dark-mode-brand-info-darker:                              #0143BE; /* name: Darker; */
+    --dark-mode-brand-info-gradient-start:                      #0143BE; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-brand-info-gradient-end:                        #1062FE; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-brand-info-gradient-h:                          linear-gradient( 90deg, var(--brand-info-gradient-start) 0%, var(--brand-info-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-brand-info-gradient-v:                          linear-gradient( 0deg, var(--brand-info-gradient-end) 0%, var(--brand-info-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    --brand-info:                                               var(--dark-mode-brand-info);
+    --brand-info-lighter:                                       var(--dark-mode-brand-info-lighter);
+    --brand-info-lighter-2:                                     var(--dark-mode-brand-info-lighter-2);
+    --brand-info-lighter-3:                                     var(--dark-mode-brand-info-lighter-3);
+    --brand-info-darker:                                        var(--dark-mode-brand-info-darker);
+    --brand-info-gradient-start:                                var(--dark-mode-brand-info-gradient-start);
+    --brand-info-gradient-end:                                  var(--dark-mode-brand-info-gradient-end);
+    --brand-info-gradient-h:                                    linear-gradient( 90deg, var(--dark-mode-brand-info-gradient-start) 0%, var(--dark-mode-brand-info-gradient-end) 100%);
+    --brand-info-gradient-v:                                    linear-gradient( 0deg, var(--dark-mode-brand-info-gradient-end) 0%, var(--dark-mode-brand-info-gradient-start) 100%);
+ 
+    /* Section: Dark Mode Success */  
+
+    --dark-mode-brand-success:                                  #31AF4E; /* name: Main; */
+    --dark-mode-brand-success-lighter:                          #5CD175; /* name: Lighter; */
+    --dark-mode-brand-success-lighter-2:                        #304B34; /* name: Lighter 2; */
+    --dark-mode-brand-success-lighter-3:                        #2C4531; /* name: Lighter 3; */
+    --dark-mode-brand-success-lighter-4:                        #203224; /* name: Lighter 4; */
+    --dark-mode-brand-success-darker:                           #247F38; /* name: Darker; */
+    --dark-mode-brand-success-gradient-start:                   #247F38; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-brand-success-gradient-end:                     #31AF4E; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-brand-success-gradient-h:                       linear-gradient( 90deg, var(--brand-success-gradient-start) 0%, var(--brand-success-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-brand-success-gradient-v:                       linear-gradient( 0deg, var(--brand-success-gradient-end) 0%, var(--brand-success-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+    
+    --brand-success:                                            var(--dark-mode-brand-success);
+    --brand-success-lighter:                                    var(--dark-mode-brand-success-lighter);
+    --brand-success-lighter-2:                                  var(--dark-mode-brand-success-lighter-2);
+    --brand-success-lighter-3:                                  var(--dark-mode-brand-success-lighter-3);
+    --brand-success-lighter-4:                                  var(--dark-mode-brand-success-lighter-4);
+    --brand-success-darker:                                     var(--dark-mode-brand-success-darker);
+    --brand-success-gradient-start:                             var(--dark-mode-brand-success-gradient-start);
+    --brand-success-gradient-end:                               var(--dark-mode-brand-success-gradient-end);
+    --brand-success-gradient-h:                                 linear-gradient( 90deg, var(--dark-mode-brand-success-gradient-start) 0%, var(--dark-mode-brand-success-gradient-end) 100%);
+    --brand-success-gradient-v:                                 linear-gradient( 0deg, var(--dark-mode-brand-success-gradient-end) 0%, var(--dark-mode-brand-success-gradient-start) 100%);
+
+    /* Section: Dark Mode Warning */  
+
+    --dark-mode-brand-warning:                                  #EB7D00; /* name: Main; */
+    --dark-mode-brand-warning-lighter:                          #FFAE52; /* name: Lighter; */
+    --dark-mode-brand-warning-lighter-2:                        #44392C; /* name: Lighter 2; */
+    --dark-mode-brand-warning-lighter-3:                        #3E3428; /* name: Lighter 3; */
+    --dark-mode-brand-warning-lighter-4:                        #322A20; /* name: Lighter 4; */
+    --dark-mode-brand-warning-darker:                           #CC6D00; /* name: Darker; */
+    --dark-mode-brand-warning-gradient-start:                   #CC6D00; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-brand-warning-gradient-end:                     #EB7D00; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-brand-warning-gradient-h:                       linear-gradient(90deg, var(--brand-warning-gradient-start) 0%, var(--brand-warning-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-brand-warning-gradient-v:                       linear-gradient( 0deg, var(--brand-warning-gradient-end) 0%, var(--brand-warning-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    --brand-warning:                                            var(--dark-mode-brand-warning);
+    --brand-warning-lighter:                                    var(--dark-mode-brand-warning-lighter);
+    --brand-warning-lighter-2:                                  var(--dark-mode-brand-warning-lighter-2);
+    --brand-warning-lighter-3:                                  var(--dark-mode-brand-warning-lighter-3);
+    --brand-warning-lighter-4:                                  var(--dark-mode-brand-warning-lighter-4);
+    --brand-warning-darker:                                     var(--dark-mode-brand-warning-darker);
+    --brand-warning-gradient-start:                             var(--dark-mode-brand-warning-gradient-start);
+    --brand-warning-gradient-end:                               var(--dark-mode-brand-warning-gradient-end);
+    --brand-warning-gradient-h:                                 linear-gradient(90deg, var(--dark-mode-brand-warning-gradient-start) 0%, var(--dark-mode-brand-warning-gradient-end) 100%);
+    --brand-warning-gradient-v:                                 linear-gradient( 0deg, var(--dark-mode-brand-warning-gradient-end) 0%, var(--dark-mode-brand-warning-gradient-start) 100%);
+
+    /* Section: Dark Mode Danger */ 
+
+    --dark-mode-brand-danger:                                   #D92632; /* name: Main; */
+    --dark-mode-brand-danger-lighter:                           #E56C74; /* name: Lighter; */
+    --dark-mode-brand-danger-lighter-2:                         #663335; /* name: Lighter 2; */
+    --dark-mode-brand-danger-lighter-3:                         #592C2F; /* name: Lighter 3; */
+    --dark-mode-brand-danger-lighter-4:                         #4B2528; /* name: Lighter 4; */
+    --dark-mode-brand-danger-darker:                            #B6202A; /* name: Darker; */
+    --dark-mode-brand-danger-gradient-start:                    #DD3C46; /* name: Gradient Start; type: gradientColor; gradientColor: start; */
+    --dark-mode-brand-danger-gradient-end:                      #9C1B24; /* name: Gradient End; type: gradientColor; gradientColor: end; */
+    --dark-mode-brand-danger-gradient-h:                        linear-gradient( 90deg, var(--brand-danger-gradient-start) 0%, var(--brand-danger-gradient-end) 100%); /* name: Gradient Horizontal; type:hidden; gradient:true; gradientType: horizontal; */
+    --dark-mode-brand-danger-gradient-v:                        linear-gradient( 0deg, var(--brand-danger-gradient-end) 0%, var(--brand-danger-gradient-start) 100%); /* name: Gradient Vertical; type:hidden; gradient:true; gradientType: vertical; */
+
+    --brand-danger:                                             var(--dark-mode-brand-danger);
+    --brand-danger-lighter:                                     var(--dark-mode-brand-danger-lighter);
+    --brand-danger-lighter-2:                                   var(--dark-mode-brand-danger-lighter-2);
+    --brand-danger-lighter-3:                                   var(--dark-mode-brand-danger-lighter-3);
+    --brand-danger-lighter-4:                                   var(--dark-mode-brand-danger-lighter-4);
+    --brand-danger-darker:                                      var(--dark-mode-brand-danger-darker);
+    --brand-danger-gradient-start:                              var(--dark-mode-brand-danger-gradient-start);
+    --brand-danger-gradient-end:                                var(--dark-mode-brand-danger-gradient-end);
+    --brand-danger-gradient-h:                                  linear-gradient( 90deg, var(--dark-mode-brand-danger-gradient-start) 0%, var(--dark-mode-brand-danger-gradient-end) 100%);
+    --brand-danger-gradient-v:                                  linear-gradient( 0deg, var(--dark-mode-brand-danger-gradient-end) 0%, var(--dark-mode-brand-danger-gradient-start) 100%);
+
+    /* Section: Dark Mode UI Icon */
+
+    --dark-mode-gray-icons:                                     #ACAFB9;
+    --dark-mode-gray-icons-hover:                              #f59033;
+
+    --gray-icons:                                               var(--dark-mode-gray-icons);
+    --gray-icons-hover:                                         var(--dark-mode-gray-icons-hover);
+
+    /* Section: Dark Mode SVG Illustrations */
+
+    --dark-mode-svg-illustration-gray-1:                        #313335; /* name: Gray Base; type: hiddenlist;*/
+    --dark-mode-svg-illustration-gray-2:                        #404245; /* name: Gray Lighter; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-3:                        #62666A; /* name: Gray Lighter 2; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-4:                        #767A7F; /* name: Gray Lighter 3; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-5:                        #808489; /* name: Gray Lighter 4; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-6:                        #8A8E93; /* name: Gray Lighter 5; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-7:                        #909398; /* name: Gray Lighter 6; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-8:                        #9A9DA2; /* name: Gray Lighter 7; type: hiddenlist; */
+    --dark-mode-svg-illustration-gray-w:                        #FFFFFF; /* name: White; type: hiddenlist; */
+    --dark-mode-svg-illustration-shadow:                        #000000;
+
+    --svg-illustration-gray-1:                                  var(--dark-mode-svg-illustration-gray-1);
+    --svg-illustration-gray-2:                                  var(--dark-mode-svg-illustration-gray-2);
+    --svg-illustration-gray-3:                                  var(--dark-mode-svg-illustration-gray-3);
+    --svg-illustration-gray-4:                                  var(--dark-mode-svg-illustration-gray-4);
+    --svg-illustration-gray-5:                                  var(--dark-mode-svg-illustration-gray-5);
+    --svg-illustration-gray-6:                                  var(--dark-mode-svg-illustration-gray-6);
+    --svg-illustration-gray-7:                                  var(--dark-mode-svg-illustration-gray-7);
+    --svg-illustration-gray-8:                                  var(--dark-mode-svg-illustration-gray-8);
+    --svg-illustration-gray-w:                                  var(--dark-mode-svg-illustration-gray-w);
+    --svg-illustration-shadow:                                  var(--dark-mode-svg-illustration-shadow);
+
+    --dark-mode-svg-illustration-primary-0:                     #B55009; /* name: Primary Darker ; type: hiddenlist;*/
+    --dark-mode-svg-illustration-primary-1:                     #E87A2C; /* name: Primary Base ; type: hiddenlist;*/
+    --dark-mode-svg-illustration-primary-2:                     #F38636; /* name: Primary - Lighter; type: hiddenlist; */
+    --dark-mode-svg-illustration-primary-3:                     #FF9D56; /* name: Primary - Lighter 2; type: hiddenlist; */
+    --dark-mode-svg-illustration-primary-4:                     #FFAB6E; /* name: Primary - Lighter 3; type: hiddenlist; */
+
+    --svg-illustration-primary-0:                               var(--dark-mode-svg-illustration-primary-0);
+    --svg-illustration-primary-1:                               var(--dark-mode-svg-illustration-primary-1);
+    --svg-illustration-primary-2:                               var(--dark-mode-svg-illustration-primary-2);
+    --svg-illustration-primary-3:                               var(--dark-mode-svg-illustration-primary-3);
+    --svg-illustration-primary-4:                               var(--dark-mode-svg-illustration-primary-4);
+
+    --dark-mode-svg-illustration-yellow-1:                      #F9A000; /* name: Yellow - Base; type: hiddenlist; */
+    --dark-mode-svg-illustration-yellow-2:                      #FBB900; /* name: Yellow - Lighter; type: hiddenlist; */
+    --dark-mode-svg-illustration-yellow-3:                      #FFD251; /* name: Yellow - Lighter 2; type: hiddenlist; */
+    --dark-mode-svg-illustration-yellow-4:                      #FBC666; /* name: Yellow - Lighter 3; type: hiddenlist; */
+    --dark-mode-svg-illustration-yellow-5:                      #FCDA83; /* name: Yellow - Lighter 4; type: hiddenlist; */
+
+    --svg-illustration-yellow-1:                                var(--dark-mode-svg-illustration-yellow-1);
+    --svg-illustration-yellow-2:                                var(--dark-mode-svg-illustration-yellow-2);
+    --svg-illustration-yellow-3:                                var(--dark-mode-svg-illustration-yellow-3);
+    --svg-illustration-yellow-4:                                var(--dark-mode-svg-illustration-yellow-4);
+    --svg-illustration-yellow-5:                                var(--dark-mode-svg-illustration-yellow-5);
+
+    --dark-mode-svg-illustration-green-1:                       #1F5C3A; /* name: Yellow - Base; type: hiddenlist; */
+    --dark-mode-svg-illustration-green-2:                       #31854C; /* name: Yellow - Lighter 2; type: hiddenlist; */
+    --dark-mode-svg-illustration-green-3:                       #35B65E; /* name: Yellow - Lighter 3; type: hiddenlist; */
+    --dark-mode-svg-illustration-green-4:                       #5BD682; /* name: Yellow - Lighter 4; type: hiddenlist; */
+    
+    --svg-illustration-green-1:                                 var(--dark-mode-svg-illustration-green-1);
+    --svg-illustration-green-2:                                 var(--dark-mode-svg-illustration-green-2);
+    --svg-illustration-green-3:                                 var(--dark-mode-svg-illustration-green-3);
+    --svg-illustration-green-4:                                 var(--dark-mode-svg-illustration-green-4);
+
+    --dark-mode-svg-illustration-line-color:                    rgba(255, 255, 255, 0.24);
+    --svg-illustration-line-color:                              var(--dark-mode-svg-illustration-line-color);
+
+    --dark-mode-svg-banner-shape-left:                          var(--dark-mode-brand-primary);
+    --dark-mode-svg-banner-shape-right:                         var(--dark-mode-brand-primary-lighter);
+
+    --svg-banner-shape-left:                                    var(--dark-mode-svg-banner-shape-left);
+    --svg-banner-shape-right:                                   var(--dark-mode-svg-banner-shape-right);
+
+    /* Section: Dark Mode Background */
+    
+    --dark-mode-body-bg:                                        #121212; /* name: Body; type: hiddenlist; */
+    --body-bg:                                                  var(--dark-mode-body-bg);             
+
+    /* END PARSE */ 
+}

@@ -1,0 +1,2 @@
+<div class="alert alert-success text-center" role="alert">{$LANG.greppproducts.twocharordercreated|sprintf:$vars.invoiceid}</div>
+<div class="alert alert-info text-center" role="alert"><a href="{$vars.url}">{$LANG.greppproducts.twocharorderclickhere}</a></div>

@@ -1,0 +1,11 @@
+.operating-hour-title {
+    display: block;
+}
+.operating-hour-zone {
+    display: block;
+}
+.operating-hour-val {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}

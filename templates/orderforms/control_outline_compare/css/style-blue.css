@@ -1,0 +1,14 @@
+/* Outline */
+
+.panel-outline-default {
+	border: 1px solid #3598DB;
+	background: #fff;
+}
+.panel-solid-primary {
+	border: 1px solid #3598DB;
+}
+
+.panel-outline-default .panel-footer {
+	border: none;
+	background: none;
+}

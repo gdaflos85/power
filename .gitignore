@@ -1,6 +1,9 @@
 # Sensitive configuration files (CRITICAL)
 configuration.php
 .env
+client_secret*.json
+*.pem
+*.key
 
 # Large archives & backups (GitHub limits files to 100MB)
 *.zip

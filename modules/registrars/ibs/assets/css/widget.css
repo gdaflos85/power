@@ -1,0 +1,40 @@
+.account-widget-ibs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 120px;
+}
+
+img.ibs-widget-logo {
+    height: auto;
+    width: 170px;
+}
+
+a.ibs-widget-expires {
+    font-size: 12px;
+}
+
+a.ibs-widget-expires:hover {
+    text-decoration: unset;
+}
+
+div.widget-footer-outer {
+    min-height: 15px !important;
+    position: relative;
+}
+
+div.widget-footer-outer>.current-version-inner {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-style: italic;
+    font-size: 11px
+}
+
+div.widget-footer-outer>.quota-stats-inner {
+    position: absolute;
+    bottom: 3px;
+    left: 5px;
+    font-style: italic;
+    font-size: 11px
+}

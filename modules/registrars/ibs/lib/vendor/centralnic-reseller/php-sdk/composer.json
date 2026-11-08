@@ -1,0 +1,71 @@
+{
+  "name": "centralnicgroup-opensource/rtldev-middleware-php-sdk",
+  "type": "library",
+  "description": "API connector library for the insanely fast CNIC API Backends (HEXONET, CNR former RRPproxy)",
+  "keywords": [
+    "SDK",
+    "api",
+    "connector",
+    "hexonet",
+    "rrpproxy",
+    "centralnic",
+    "reseller",
+    "cnic",
+    "domain",
+    "ssl",
+    "domain",
+    "isp",
+    "ispapi",
+    "cert",
+    "dns",
+    "backorder",
+    "premium",
+    "preregistration",
+    "registration",
+    "application"
+  ],
+  "homepage": "https://github.com/centralnicgroup-opensource/rtldev-middleware-php-sdk",
+  "readme": "README.md",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kai Schwarz",
+      "email": "kai.schwarz@centralnic.com",
+      "homepage": "https://centralnicgroup.com",
+      "role": "Chief Development Officer"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.0",
+    "centralnic-reseller/idn-converter": "^1.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7",
+    "phpunit/phpunit": "^10.5",
+    "phpstan/phpstan": "^2.0",
+    "phpstan/extension-installer": "^1.4",
+    "smeghead/php-class-diagram": "^1.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "CNIC\\": "src/"
+    }
+  },
+  "scripts": {
+    "docs": "rm -rf build docs; test ! -e phpdoc.phar && wget https://phpdoc.org/phpDocumentor.phar -O phpdoc.phar && chmod +x phpdoc.phar; ./phpdoc.phar -c phpdoc.dist.xml",
+    "codefix": "phpcbf --ignore=\"*/vendor/*\" --standard=.github/linters/phpcs.xml -q src tests",
+    "lint": "phpcs --ignore=\"*/vendor/*\" --standard=.github/linters/phpcs.xml -q src tests",
+    "test": "XDEBUG_MODE=coverage phpunit --coverage-html=./reports/html --debug",
+    "phpstan": "phpstan analyse -c .github/linters/phpstan.neon",
+    "generate-uml": "test ! -e plantuml.jar && wget https://sourceforge.net/projects/plantuml/files/plantuml.jar/download -O plantuml.jar; ./vendor/bin/php-class-diagram --jig-diagram src/ >> ./docs/uml.puml; java -jar plantuml.jar ./docs/uml.puml -o uml_diagram"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  },
+  "stability-flags": {
+  },
+  "platform-dev": {
+  }
+}

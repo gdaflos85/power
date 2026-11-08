@@ -1,0 +1,2 @@
+<div class="alert alert-info text-center" role="alert">{$LANG.greppproducts.transferfor|sprintf:$vars.domain}</div>
+<div class="alert alert-info text-center" role="alert">{$LANG.greppproducts.currentregistrant|sprintf:$vars.contactId}</div>

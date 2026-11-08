@@ -1,0 +1,1841 @@
+{
+    "menu-settings": {
+        "name": "Client Main Menu - WHMCS Defaults",
+        "version": "1.0.0",
+        "location": "Main Menu",
+        "active": 0,
+        "display": "Default",
+        "rules": ""
+    },
+    "menu-items": [
+        {
+            "name": "Home",
+            "location": null,
+            "active": 1,
+            "type": "WHMCS Page",
+            "settings": {
+                "pageslug": "ec9c2b65a12ec830ea02ea73d206896c",
+                "translation-method": "whmcs",
+                "icon": "ls ls-home",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "icon",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "clientareanavhome",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            }
+        },
+        {
+            "name": "Services",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "whmcs",
+                "icon": "lm lm-hosting",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "navservices",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "My Services",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "eb3cb218e2b5edae24f94d87b61b56cc",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-hosting",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "clientareanavservices",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": "-----"
+                },
+                {
+                    "name": "Renew Services",
+                    "location": null,
+                    "active": 0,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "9644c79760c922cb8cd7f27640e2b742",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-refresh",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"polish\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "renewService.titlePlural",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "New Item",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "polish": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Order New Services",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "86024cad1e83101d97359d7351051156",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-box",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "navservicesorder",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "View Available Addons",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "44d953f68cd66a06bca460e237decaf0",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-addon",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "clientareaviewaddons",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Domains",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "whmcs",
+                "icon": "lm lm-globe",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "navdomains",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "My Domains",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "a0038de61cce082b09e275e7af5b2c72",
+                        "translation-method": "whmcs",
+                        "icon": "lm lm-globe",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "clientareanavdomains",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": "-----"
+                },
+                {
+                    "name": "Domain Renewals",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "54699144aa1bd5fb0e349080a7248295",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-refresh",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "domainrenewals",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Register a New Domain",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "b6cbb659d9fb5cb3c7ee11e20982c4c2",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-dns",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "navregisterdomain",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Transfer Domains to Us",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "7220d55075bc5ee40f74a25d5535072c",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-transfer",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "navtransferdomain",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Website & Security",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "whmcs",
+                "icon": "lm lm-php-admin",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "navWebsiteSecurity",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "New Item",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "MarketConnect Products",
+                    "location": null,
+                    "active": 1,
+                    "type": "Predefined List",
+                    "settings": {
+                        "list": "MarketConnect Products"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": "MarketConnect Products"
+                },
+                {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": "-----"
+                },
+                {
+                    "name": "Manage SSL Certificates",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "d1714749b9a42a7c0a45cc4ace56f34e",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-security-code",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "navManageSsl",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "New Item",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Billing",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "whmcs",
+                "icon": "lm lm-document",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "navbilling",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "My Invoices",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "36ac4a91e9d99aacefb93e308f33c74e",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-document",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "invoices",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "My Quotes",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "e842e2340ace2840b71477dc4d007267",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-text-cloud",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "quotestitle",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": "-----"
+                },
+                {
+                    "name": "Mass Payment",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "a694d22474c531a9e7246bc115f6002b",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-bank-note",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "masspaytitle",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Payment Methods",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "0a631edbc59176766bc4651f7b2018cc",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-bank-note",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "paymentMethods.title",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Add Funds",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "1e6ae57bcba3e8882cb7eced84b54399",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-credit",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "addfunds",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "whmcs",
+                "icon": "lm lm-envelope",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "navsupport",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "Tickets",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "9f3b8d9439b28a7bbec3db6a7c26a47a",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-envelope",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "navtickets",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Announcements",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "bccd1749fc2f1ef02fdc62280cd40df0",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-text-cloud",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "announcementstitle",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Knowledgebase",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "c08500cb9b12178780fd9d10e43e8c2c",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-document-info",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "knowledgebasetitle",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Downloads",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "d07d50a751bc6ddf12bf3af0efee9b45",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-download-square",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "downloadstitle",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Network Status",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "d8ec5eb30ec0cdd56e7672fd550a0afd",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-range",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "networkstatustitle",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Open Ticket",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "634dc1498bd40a79a7bd94922d6d893b",
+                        "translation-method": "whmcs",
+                        "icon": "ls ls-new-window",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "null",
+                    "translation": {
+                        "whmcs": "navopenticket",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Affiliates",
+            "location": null,
+            "active": 1,
+            "type": "WHMCS Page",
+            "settings": {
+                "pageslug": "8039227006b7ce850a1cb99be5471e50",
+                "translation-method": "whmcs",
+                "icon": "lm lm-bar-graph",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "affiliatestitle",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            }
+        },
+        {
+            "name": "Open Ticket",
+            "location": null,
+            "active": 1,
+            "type": "WHMCS Page",
+            "settings": {
+                "pageslug": "634dc1498bd40a79a7bd94922d6d893b",
+                "translation-method": "whmcs",
+                "icon": "lm lm-chat-cloud",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "Default",
+                    "Left"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "button",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "right",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "navopenticket",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+<?php
+/* Smarty version 3.1.48, created on 2024-09-02 05:18:01
+  from 'd6d14a06a6af28ce50ea0dac8d7a345f12b99261' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.48',
+  'unifunc' => 'content_66d54a89c6b5a4_25613551',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_66d54a89c6b5a4_25613551 (Smarty_Internal_Template $_smarty_tpl) {
+echo '<?xml ';?>
+version="1.0" encoding="UTF-8" standalone="no"<?php echo '?>';?>
+
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+    <command>
+        <create>
+            <domain:create xmlns:domain="urn:ietf:params:xml:ns:domain-1.0" xsi:schemaLocation="urn:ietf:params:xml:ns:domain-1.0 domain-1.0.xsd">
+                <domain:name><?php echo $_smarty_tpl->tpl_vars['domain']->value;?>
+</domain:name>
+                <domain:period unit="y"><?php echo $_smarty_tpl->tpl_vars['years']->value;?>
+</domain:period>
+                <?php if ((isset($_smarty_tpl->tpl_vars['nameservers']->value))) {?>
+                <domain:ns>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['nameservers']->value, 'nameserver');
+$_smarty_tpl->tpl_vars['nameserver']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['nameserver']->value) {
+$_smarty_tpl->tpl_vars['nameserver']->do_else = false;
+?>
+                    <domain:hostObj><?php echo $_smarty_tpl->tpl_vars['nameserver']->value;?>
+</domain:hostObj>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </domain:ns>
+                <?php }?>
+                <domain:registrant><?php echo $_smarty_tpl->tpl_vars['registrant']->value;?>
+</domain:registrant>
+                <?php if ((isset($_smarty_tpl->tpl_vars['contacts']->value))) {?>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['contacts']->value, 'contact');
+$_smarty_tpl->tpl_vars['contact']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['contact']->value) {
+$_smarty_tpl->tpl_vars['contact']->do_else = false;
+?>
+                <domain:contact type="<?php echo $_smarty_tpl->tpl_vars['contact']->value['type'];?>
+"><?php echo $_smarty_tpl->tpl_vars['contact']->value['id'];?>
+</domain:contact>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                <?php }?>
+                <domain:authInfo>
+                    <?php if ($_smarty_tpl->tpl_vars['epp43']->value) {?>
+                    <domain:pw/>
+                    <?php } else { ?>
+                    <domain:pw><![CDATA[<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
+]]></domain:pw>
+                    <?php }?>
+                </domain:authInfo>
+            </domain:create>
+        </create>
+        <clTRID><?php echo $_smarty_tpl->tpl_vars['registrarId']->value;?>
+:<?php echo $_smarty_tpl->tpl_vars['eppUserName']->value;?>
+:<?php echo $_smarty_tpl->tpl_vars['pin']->value;?>
+</clTRID>
+    </command>
+</epp>
+<?php }
+}

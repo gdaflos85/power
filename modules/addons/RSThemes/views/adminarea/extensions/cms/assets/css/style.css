@@ -1,0 +1,13 @@
+
+.operating-hour-title {
+    display: block;
+    color: #7c8088;
+}
+.operating-hour-zone {
+    display: block;
+    color: #7c8088;
+}
+.operating-hour-val {
+    font-size: 20px;
+    font-weight: 500;
+}

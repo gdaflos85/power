@@ -1,0 +1,48 @@
+{
+  "name": "php-idn-converter",
+  "version": "0.0.0-development",
+  "description": "PHP IDNA Translator to convert IDNA domains to Unicode and ASCII (IDN and Punycode)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.6.1"
+  },
+  "keywords": [
+    "php idn converter",
+    "php idna",
+    "php idna",
+    "domains",
+    "convert",
+    "to",
+    "punycode",
+    "covert",
+    "to",
+    "idna",
+    "php",
+    "library"
+  ],
+  "bugs": "https://github.com/centralnicgroup-opensource/rtldev-middleware-php-idna-translator/issues",
+  "homepage": "https://github.com/centralnicgroup-opensource/rtldev-middleware-php-idna-translator",
+  "repository": "github:centralnicgroup-opensource/rtldev-middleware-php-idna-translator.git",
+  "author": {
+    "name": "Team Internet Group PLC"
+  },
+  "maintainers": [
+    {
+      "name": "Asif Nawaz",
+      "email": "asif.nawaz@centralnic.com"
+    },
+    {
+      "name": "Kai Schwarz",
+      "email": "kai.schwarz@centralnic.com"
+    }
+  ],
+  "overrides": {
+    "glob-parent": "^6.0.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.0.0",
+    "semantic-release-teams-notify-plugin": "github:centralnicgroup-opensource/rtldev-middleware-semantic-release-notify-plugin"
+  }
+}

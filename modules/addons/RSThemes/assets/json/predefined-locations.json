@@ -1,0 +1,382 @@
+{
+    "locations": {
+        "new_york": {
+            "city": "new_york",
+            "city_full": "New York",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "240",
+            "position_left": "325"
+        },
+        "washington": {
+            "city": "washington",
+            "city_full": "Washington",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "254",
+            "position_left": "296"
+        },
+        "san_francisco": {
+            "city": "san_francisco",
+            "city_full": "San Francisco",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "254",
+            "position_left": "142" 
+        },
+        "seattle": {
+            "city": "seattle",
+            "city_full": "Seattle",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "212",
+            "position_left": "142"
+        },
+        "new_jersey": {
+            "city": "new_jersey",
+            "city_full": "New Jersey",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "245",
+            "position_left": "315"
+        },
+        "silicon_valley": {
+            "city": "silicon_valley",
+            "city_full": "Silicon Valley",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "260",
+            "position_left": "152"
+        },
+        "atlanta": {
+            "city": "atlanta",
+            "city_full": "Atlanta",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "270",
+            "position_left": "272"
+        },
+        "chicago": {
+            "city": "chicago",
+            "city_full": "Chicago",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "220",
+            "position_left": "279"
+        },
+        "dallas": {
+            "city": "dallas",
+            "city_full": "Dallas",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "272",
+            "position_left": "234"
+        },
+        "los_angeles": {
+            "city": "los_angeles",
+            "city_full": "Los Angeles",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "282",
+            "position_left": "162"
+        },
+        "miami": {
+            "city": "miami",
+            "city_full": "Miami",
+            "country": "united_states",
+            "country_full": "United States",
+            "continent": "north_america",
+            "position_top": "305",
+            "position_left": "287"
+        },
+        "toronto": {
+            "city": "toronto",
+            "city_full": "Toronto",
+            "country": "canada",
+            "country_full": "Canada",
+            "continent": "north_america",
+            "position_top": "210",
+            "position_left": "294"
+        },
+        "mexico_city": {
+            "city": "mexico_city",
+            "city_full": "Mexico City",
+            "country": "mexico",
+            "country_full": "Mexico",
+            "continent": "north_america",
+            "position_top": "325",
+            "position_left": "217"
+        },
+        "sao_paulo": {
+            "city": "sao_paulo",
+            "city_full": "São Paulo",
+            "country": "brazil",
+            "country_full": "Brazil",
+            "continent": "south_america",
+            "position_top": "490",
+            "position_left": "410"
+        },
+        "santiago": {
+            "city": "santiago",
+            "city_full": "Santiago",
+            "country": "chile",
+            "country_full": "Chile",
+            "continent": "south_america",
+            "position_top": "518",
+            "position_left": "318"
+        },
+        "london": {
+            "city": "london",
+            "city_full": "London",
+            "country": "united_kingdom",
+            "country_full": "United Kingdom",
+            "continent": "europe",
+            "position_top": "194",
+            "position_left": "613"
+        },
+        "manchester": {
+            "city": "manchester",
+            "city_full": "Manchester",
+            "country": "united_kingdom",
+            "country_full": "United Kingdom",
+            "continent": "europe",
+            "position_top": "185",
+            "position_left": "607"
+        },
+        "frankfurt": {
+            "city": "frankfurt",
+            "city_full": "Frankfurt",
+            "country": "germany",
+            "country_full": "Germany",
+            "continent": "europe",
+            "position_top": "202",
+            "position_left": "645"
+        },
+        "amsterdam": {
+            "city": "amsterdam",
+            "city_full": "Amsterdam",
+            "country": "netherlands",
+            "country_full": "Netherlands",
+            "continent": "europe",
+            "position_top": "191",
+            "position_left": "634"
+        },
+        "paris": {
+            "city": "paris",
+            "city_full": "Paris",
+            "country": "france",
+            "country_full": "France",
+            "continent": "europe",
+            "position_top": "210",
+            "position_left": "626"
+        },
+        "stockholm": {
+            "city": "stockholm",
+            "city_full": "Stockholm",
+            "country": "sweden",
+            "country_full": "Sweden",
+            "continent": "europe",
+            "position_top": "150",
+            "position_left": "676"
+        },
+        "madrid": {
+            "city": "madrid",
+            "city_full": "Madrid",
+            "country": "spain",
+            "country_full": "Spain",
+            "continent": "europe",
+            "position_top": "234",
+            "position_left": "603"
+        },
+        "warsaw": {
+            "city": "warsaw",
+            "city_full": "Warsaw",
+            "country": "poland",
+            "country_full": "Poland",
+            "continent": "europe",
+            "position_top": "188",
+            "position_left": "678"
+        },
+        "zurich": {
+            "city": "zurich",
+            "city_full": "Zurich",
+            "country": "switzerland",
+            "country_full": "Switzerland",
+            "continent": "europe",
+            "position_top": "208",
+            "position_left": "652"
+        },
+        "milan": {
+            "city": "milan",
+            "city_full": "Milan",
+            "country": "italy",
+            "country_full": "Italy",
+            "continent": "europe",
+            "position_top": "214",
+            "position_left": "656"
+        },
+        "vienna": {
+            "city": "vienna",
+            "city_full": "Vienna",
+            "country": "austria",
+            "country_full": "Austria",
+            "continent": "europe",
+            "position_top": "204",
+            "position_left": "673"
+        },
+        "bucharest": {
+            "city": "bucharest",
+            "city_full": "Bucharest",
+            "country": "romania",
+            "country_full": "Romania",
+            "continent": "europe",
+            "position_top": "220",
+            "position_left": "711"
+        },
+        "hong_kong": {
+            "city": "hong_kong",
+            "city_full": "Hong Kong",
+            "country": "china",
+            "country_full": "China",
+            "continent": "asia",
+            "position_top": "320",
+            "position_left": "992"
+        },
+        "shanghai": {
+            "city": "shanghai",
+            "city_full": "Shanghai",
+            "country": "china",
+            "country_full": "China",
+            "continent": "asia",
+            "position_top": "296",
+            "position_left": "1014"
+        },
+        "singapore": {
+            "city": "singapore",
+            "city_full": "Singapore",
+            "country": "singapore",
+            "country_full": "Singapore",
+            "continent": "asia",
+            "position_top": "400",
+            "position_left": "958"
+        },
+        "tokyo": {
+            "city": "tokyo",
+            "city_full": "Tokyo",
+            "country": "japan",
+            "country_full": "Japan",
+            "continent": "asia",
+            "position_top": "288",
+            "position_left": "1070"
+        },
+        "osaka": {
+            "city": "osaka",
+            "city_full": "Osaka",
+            "country": "japan",
+            "country_full": "Japan",
+            "continent": "asia",
+            "position_top": "288",
+            "position_left": "1061"
+        },
+        "seoul": {
+            "city": "seoul",
+            "city_full": "Seoul",
+            "country": "south_korea",
+            "country_full": "South Korea",
+            "continent": "asia",
+            "position_top": "262",
+            "position_left": "1034"
+        },
+        "mumbai": {
+            "city": "mumbai",
+            "city_full": "Mumbai",
+            "country": "india",
+            "country_full": "India",
+            "continent": "asia",
+            "position_top": "341",
+            "position_left": "860"
+        },
+        "bangalore": {
+            "city": "bangalore",
+            "city_full": "Bangalore",
+            "country": "india",
+            "country_full": "India",
+            "continent": "asia",
+            "position_top": "366",
+            "position_left": "873"
+        },
+        "delhi_ncr": {
+            "city": "delhi_ncr",
+            "city_full": "Delhi NCR",
+            "country": "india",
+            "country_full": "India",
+            "continent": "asia",
+            "position_top": "320",
+            "position_left": "876"
+        },
+        "sydney": {
+            "city": "sydney",
+            "city_full": "Sydney",
+            "country": "australia",
+            "country_full": "Australia",
+            "continent": "australia",
+            "position_top": "536",
+            "position_left": "1109"
+        },
+        "melbourne": {
+            "city": "melbourne",
+            "city_full": "Melbourne",
+            "country": "australia",
+            "country_full": "Australia",
+            "continent": "australia",
+            "position_top": "558",
+            "position_left": "1088"
+        },
+        "johannesburg": {
+            "city": "johannesburg",
+            "city_full": "Johannesburg",
+            "country": "south_africa",
+            "country_full": "South Africa",
+            "continent": "africa",
+            "position_top": "522",
+            "position_left": "707"
+        },
+        "dubai": {
+            "city": "dubai",
+            "city_full": "Dubai",
+            "country": "united_arab_emirates",
+            "country_full": "United Arab Emirates",
+            "continent": "middle_east",
+            "position_top": "313",
+            "position_left": "798"
+        },
+        "istanbul": {
+            "city": "istanbul",
+            "city_full": "Istanbul",
+            "country": "turkey",
+            "country_full": "Turkey",
+            "continent": "middle_east",
+            "position_top": "234",
+            "position_left": "718"
+        },
+        "tel_aviv_yafo": {
+            "city": "tel_aviv_yafo",
+            "city_full": "Tel Aviv Yafo",
+            "country": "israel",
+            "country_full": "Isreal",
+            "continent": "middle_east",
+            "position_top": "296",
+            "position_left": "740"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+$( "#mg-wrapper .progress-bar" ).wrapInner( "<span class='progress-bar-value'></span>");

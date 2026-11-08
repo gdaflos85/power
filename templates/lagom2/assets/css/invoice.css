@@ -1,0 +1,187 @@
+.invoice-container {
+	padding: 48px 32px 48px 32px;
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 24px rgba(0, 0, 0, 0.08);
+	margin: 16px auto;
+	border-radius: 6px;
+}
+.form-control {
+	display: block;
+	width: 100%;
+	height: 44px;
+	padding: 8px 16px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #17191c;
+	background: #fff;
+	background-clip: padding-box;
+	border: 1px solid #DEE0E3;
+	border-radius: 3px;
+	transition: border-color .24s ease,box-shadow .24s ease,background .24s ease;
+	margin-top: 16px;
+	outline: none;
+	box-shadow: none;
+}
+.form-control:hover {
+	background-color: #fff;
+	border-color: #babec7;
+	color: #17191c;
+}
+.form-control:active,
+.form-control:focus{
+	outline: none;
+	box-shadow: none;
+}
+.panel {
+	margin-bottom: 16px;
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	margin-top: 16px;
+}
+.panel-heading {
+	display: flex;
+	align-items: center;
+	min-height: 56px;
+	padding: 16px 24px;
+	border-bottom: 1px solid transparent;
+	border-radius: 0;
+
+}
+.panel-default>.panel-heading {
+	background-color: transparent;
+	border-color: #e9eaec;
+	padding: 0;
+}
+.panel-title {
+	flex: 1;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #17191c;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 24px;
+}
+.panel-body {
+	padding: 0;
+}
+.table {
+	margin: 0;
+}
+.table>thead>tr>td {
+	background: transparent;
+	border-top: 1px solid #e9eaec;
+	height: 40px;
+	padding: 12px 8px;
+	vertical-align: middle;
+	color: #7c8088;
+	font-size: 13px;
+	font-weight: 400;
+}
+.table>thead>tr>td strong{
+	font-weight: 400;
+}
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+	background: transparent;
+	border-top: 1px solid #e9eaec;
+	height: 58px;
+	padding: 16px 8px;
+	vertical-align: middle;
+	color: #17191c;
+}
+.transactions-container .table{
+	margin-bottom: 16px;
+}
+.table>tbody>tr>td:first-child,
+.table>tfoot>tr>td:first-child,
+.table>tbody>tr>th:first-child,
+.table>thead>tr>th:first-child,
+.table>thead>tr>td:first-child {
+	padding-left: 0;
+}
+.table tbody tr:last-of-type {
+	background-color: #f7f7f8;
+}
+.table tbody tr:last-of-type td:last-of-type {
+	font-weight: 700;
+}
+.btn {
+	transition: all .24s;
+}
+.btn-group-sm>.btn, .btn-sm {
+	height: 36px;
+	padding: 4px 16px;
+	font-size: 13px;
+	line-height: 28px;
+	border-radius: 3px;
+	font-weight: 500;
+}
+.btn-default {
+	color: #17191c;
+	background: transparent;
+	border-color: #acb0b9;
+}
+.btn-default:hover {
+	color: #17191c;
+	background: #f7f7f8;
+	border-color: #acb0b9;
+}
+.btn-default:active,
+.btn-default:focus {
+	box-shadow: none;
+}
+.btn-default:nth-child(2) {
+	background: #1062fe;
+	border-color: #1062fe;
+	color: #fff;
+}
+.btn-default:nth-child(2):hover {
+	background: #009AFF;
+	border-color: #009AFF;
+	color: #fff;
+}
+.btn-group .btn + .btn {
+	margin-left: 8px;
+}
+.btn-group>.btn:last-child:not(:first-child),
+.btn-group>.dropdown-toggle:not(:first-child) {
+	border-radius: 3px;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+	border-radius: 3px;
+}
+a {
+	transition: all .24s;
+}
+a:hover {
+	text-decoration: none;
+}
+.col-sm-7 h3 {
+	font-size: 40px;
+	line-height: 52px;
+	font-weight: 300;
+	margin: 0;
+}
+.col-sm-7 h2:empty {
+	display: none;
+}
+.col-sm-6.text-right-sm strong,
+.col-sm-6.text-right strong{
+	font-size: 17px;
+	line-height: 24px;
+}
+.invoice-status {
+	font-size: 17px;
+	line-height: 52px;
+	font-weight: 700;
+}
+hr {
+	border: none;
+}
+.text-center.hidden-print > a {
+	color: #1062fe;
+}
+.text-center.hidden-print > a:hover {
+	color: #1062fe;
+}

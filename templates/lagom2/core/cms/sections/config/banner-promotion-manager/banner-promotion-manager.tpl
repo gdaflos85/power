@@ -1,0 +1,1 @@
+{include file="{$systemurl}templates/$template/core/extensions/PromoBanners/promotion-cms.tpl" sectionStyle={$type}}

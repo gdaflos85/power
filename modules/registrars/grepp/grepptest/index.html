@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>:: grEPP Test 2.3.6 ::</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <style>
+        body {
+            padding: 10px;
+            font-family: 'Comfortaa', cursive;
+        }
+        .RbtnMargin { margin-left: 5px; }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3 mt-3">
+                    <h5 class="card-header">grEPP Test Script 2.3.6, &copy; 2011-2025 {{ txt[lang].name }}</h5>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <a href="mailto:support@valuehost.com.gr" class="btn btn-primary">{{ txt[lang].support }}</a>
+                            <a href="https://bitbucket.org/liagkos/whmcs-grepp/wiki/Home" class="btn btn-primary" target="_blank">Wiki</a>
+                            <a href="https://www.valuehost.com.gr/members/cart.php?a=add&pid=25" class="btn btn-primary" target="_blank">{{ txt[lang].order }}</a>
+                            <a href="https://marketplace.whmcs.com/product/4658" class="btn btn-primary" target="_blank">WHMCS Marketplace</a>
+                            <button type="button" class="btn btn-default float-right RbtnMargin" v-on:click="lang='el'">Ελληνικά</button>
+                            <button type="button" class="btn btn-default float-right" v-on:click="lang='en'">English</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <span v-for="(step, type) in results">
+            <div class="row">
+                <div class="col">
+                    <div :class="'card border-' + step.color + ' mb-3'">
+                        <div class="card-header">
+                            <div class="row">{{ step[lang].header }}</div>
+                        </div>
+                        <div :class="'card-body text-' + step.color">
+                            <h5 class="card-title">{{ step[lang].title }}</h5>
+                            <p class="card-text">
+                                <span :class="'badge badge-pill badge-' + step.color">{{ step[lang].badge }}</span>
+                                {{ step[lang].text }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            results: {},
+            chkType: '',
+            lang: 'el',
+            txt: {
+                'en':
+                    {'name': 'Athanasios Liagkos', 'support': 'Support', 'order': 'Order'},
+                'el':
+                    {'name': 'Αθανάσιος Λιάγκος', 'support': 'Υποστήριξη', 'order': 'Παραγγελία'}
+            }
+        },
+        methods: {},
+        created() {
+            $.ajax({
+                type: 'post',
+                data: {
+                    do: 'test'
+                },
+                url: 'maketests.php',
+                success: function (response) {
+                    app.results = JSON.parse(response);
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
