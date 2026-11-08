@@ -2,20 +2,27 @@
 configuration.php
 .env
 
+# Large archives & backups (GitHub limits files to 100MB)
+*.zip
+*.tar.gz
+*.rar
+power_hosting.zip
+
+# Large Log files & caches (modules/registrars/grepp/greppcore.log etc.)
+*.log
+*.txt
+error_log
+/crons/logs/
+
 # WHMCS Upload & Cache directories
 /attachments/
 /downloads/
 /templates_c/
 /storage/
 
-# Logs and temporary files
-*.log
-error_log
-/crons/logs/
-
 # System & IDE files
+push.bat
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
